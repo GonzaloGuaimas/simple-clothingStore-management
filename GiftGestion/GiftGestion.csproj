@@ -1,0 +1,356 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FB6E8ED3-3995-4C98-BF0B-E4FC48CCF9E4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GiftGestion</RootNamespace>
+    <AssemblyName>GiftGestion</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BarcodeStandard, Version=2.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BarcodeLib.2.4.0\lib\netstandard2.0\BarcodeStandard.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.5\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.11.3.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.11.3\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FirebaseDatabase.net.4.0.7\lib\netstandard2.0\Firebase.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.14.0.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.14.0\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.2.6\lib\net46\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.2.6\lib\net46\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="LiteDB, Version=4.1.4.0, Culture=neutral, PublicKeyToken=4ee40123013c9f27, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiteDB.4.1.4\lib\net40\LiteDB.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.27.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.27\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SpreadsheetLight, Version=3.5.0.0, Culture=neutral, PublicKeyToken=32fbb46dc1730c57, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpreadsheetLight.3.5.0\lib\netstandard2.0\SpreadsheetLight.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Common, Version=4.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.5.0.2\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.4.7.0\lib\net46\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive, Version=4.0.0.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reactive.4.0.0\lib\net46\System.Reactive.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=5.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.5.0.1\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.5.0.2\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Ubiety.Dns.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.27\lib\net452\Ubiety.Dns.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="ZstdNet, Version=1.4.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.27\lib\net452\ZstdNet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Flotante\ExtraccionCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Flotante\ExtraccionCaja.Designer.cs">
+      <DependentUpon>ExtraccionCaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Flotante\SeguimientoProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Flotante\SeguimientoProducto.Designer.cs">
+      <DependentUpon>SeguimientoProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Objetos\ArqueoCaja.cs" />
+    <Compile Include="Objetos\Clave.cs" />
+    <Compile Include="Objetos\Cliente.cs" />
+    <Compile Include="Objetos\ConexionSQL.cs" />
+    <Compile Include="Objetos\FirebaseHelper.cs" />
+    <Compile Include="Objetos\FormaPago.cs" />
+    <Compile Include="Objetos\GastoDiario.cs" />
+    <Compile Include="Objetos\Gmail.cs" />
+    <Compile Include="Objetos\Grupo.cs" />
+    <Compile Include="Objetos\OrdenCompra.cs" />
+    <Compile Include="Objetos\Producto.cs" />
+    <Compile Include="Objetos\Remito.cs" />
+    <Compile Include="Objetos\Rol.cs" />
+    <Compile Include="Objetos\Tarjeta.cs" />
+    <Compile Include="Objetos\Usuario.cs" />
+    <Compile Include="Objetos\Venta.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Secciones\ArqueoCajaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secciones\ArqueoCajaForm.Designer.cs">
+      <DependentUpon>ArqueoCajaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Secciones\ClientesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secciones\ClientesForm.Designer.cs">
+      <DependentUpon>ClientesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Secciones\ConfiguracionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secciones\ConfiguracionForm.Designer.cs">
+      <DependentUpon>ConfiguracionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Secciones\EstadisticasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secciones\EstadisticasForm.Designer.cs">
+      <DependentUpon>EstadisticasForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Secciones\Herramientas\ControlStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secciones\Herramientas\ControlStock.Designer.cs">
+      <DependentUpon>ControlStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Secciones\Herramientas\ReposStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secciones\Herramientas\ReposStock.Designer.cs">
+      <DependentUpon>ReposStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Secciones\OrdenCompraForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secciones\OrdenCompraForm.Designer.cs">
+      <DependentUpon>OrdenCompraForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Secciones\ProductosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secciones\ProductosForm.Designer.cs">
+      <DependentUpon>ProductosForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Secciones\RemitosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secciones\RemitosForm.Designer.cs">
+      <DependentUpon>RemitosForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Secciones\RRHHForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secciones\RRHHForm.Designer.cs">
+      <DependentUpon>RRHHForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Secciones\SubSecciones\GenerarOC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secciones\SubSecciones\GenerarOC.Designer.cs">
+      <DependentUpon>GenerarOC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Secciones\SubSecciones\GenerarRemito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secciones\SubSecciones\GenerarRemito.Designer.cs">
+      <DependentUpon>GenerarRemito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Secciones\SubSecciones\GenerarVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secciones\SubSecciones\GenerarVenta.Designer.cs">
+      <DependentUpon>GenerarVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Secciones\VentasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secciones\VentasForm.Designer.cs">
+      <DependentUpon>VentasForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Flotante\ExtraccionCaja.resx">
+      <DependentUpon>ExtraccionCaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Flotante\SeguimientoProducto.resx">
+      <DependentUpon>SeguimientoProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Secciones\ArqueoCajaForm.resx">
+      <DependentUpon>ArqueoCajaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Secciones\ClientesForm.resx">
+      <DependentUpon>ClientesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Secciones\ConfiguracionForm.resx">
+      <DependentUpon>ConfiguracionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Secciones\EstadisticasForm.resx">
+      <DependentUpon>EstadisticasForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Secciones\Herramientas\ControlStock.resx">
+      <DependentUpon>ControlStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Secciones\Herramientas\ReposStock.resx">
+      <DependentUpon>ReposStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Secciones\OrdenCompraForm.resx">
+      <DependentUpon>OrdenCompraForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Secciones\ProductosForm.resx">
+      <DependentUpon>ProductosForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Secciones\RemitosForm.resx">
+      <DependentUpon>RemitosForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Secciones\RRHHForm.resx">
+      <DependentUpon>RRHHForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Secciones\SubSecciones\GenerarOC.resx">
+      <DependentUpon>GenerarOC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Secciones\SubSecciones\GenerarRemito.resx">
+      <DependentUpon>GenerarRemito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Secciones\SubSecciones\GenerarVenta.resx">
+      <DependentUpon>GenerarVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Secciones\VentasForm.resx">
+      <DependentUpon>VentasForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
