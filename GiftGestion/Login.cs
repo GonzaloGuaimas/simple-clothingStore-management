@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using GiftGestion.Objetos;
 using GiftGestion.Secciones.Herramientas;
 using SpreadsheetLight;
+using GiftGestion.Secciones;
 
 namespace GiftGestion
 {

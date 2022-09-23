@@ -35,9 +35,11 @@ namespace GiftGestion.Secciones
 
         private async void cargarDatos()
         {
+            /*
             usuarios = await firebaseHelper.getAllUsuario();
             roles = await firebaseHelper.getAllRol();
             cargarUsuarios();
+            */
         }
 
         private void cargarUsuarios()
