@@ -279,6 +279,7 @@ namespace GiftGestion.Secciones
             this.label17.TabIndex = 56;
             this.label17.Text = "Costo";
             this.label17.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label17.Visible = false;
             // 
             // textCosto
             // 
@@ -288,6 +289,7 @@ namespace GiftGestion.Secciones
             this.textCosto.Name = "textCosto";
             this.textCosto.Size = new System.Drawing.Size(87, 23);
             this.textCosto.TabIndex = 41;
+            this.textCosto.Visible = false;
             this.textCosto.TextChanged += new System.EventHandler(this.textCosto_TextChanged);
             this.textCosto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textCosto_KeyPress);
             // 
@@ -303,6 +305,7 @@ namespace GiftGestion.Secciones
             this.buttonLimpiar.TabIndex = 55;
             this.buttonLimpiar.Text = "Limpiar";
             this.buttonLimpiar.UseVisualStyleBackColor = false;
+            this.buttonLimpiar.Visible = false;
             this.buttonLimpiar.Click += new System.EventHandler(this.buttonLimpiar_Click);
             // 
             // label12
@@ -317,6 +320,7 @@ namespace GiftGestion.Secciones
             this.label12.TabIndex = 54;
             this.label12.Text = "color";
             this.label12.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label12.Visible = false;
             // 
             // textColor
             // 
@@ -326,6 +330,7 @@ namespace GiftGestion.Secciones
             this.textColor.Name = "textColor";
             this.textColor.Size = new System.Drawing.Size(184, 23);
             this.textColor.TabIndex = 38;
+            this.textColor.Visible = false;
             // 
             // comboTalle
             // 
@@ -339,6 +344,7 @@ namespace GiftGestion.Secciones
             this.comboTalle.Name = "comboTalle";
             this.comboTalle.Size = new System.Drawing.Size(184, 24);
             this.comboTalle.TabIndex = 37;
+            this.comboTalle.Visible = false;
             // 
             // label11
             // 
@@ -352,6 +358,7 @@ namespace GiftGestion.Secciones
             this.label11.TabIndex = 53;
             this.label11.Text = "talle";
             this.label11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label11.Visible = false;
             // 
             // comboGrupo
             // 
@@ -368,6 +375,7 @@ namespace GiftGestion.Secciones
             this.comboGrupo.Name = "comboGrupo";
             this.comboGrupo.Size = new System.Drawing.Size(184, 24);
             this.comboGrupo.TabIndex = 36;
+            this.comboGrupo.Visible = false;
             // 
             // label10
             // 
@@ -381,6 +389,7 @@ namespace GiftGestion.Secciones
             this.label10.TabIndex = 52;
             this.label10.Text = "grupo";
             this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label10.Visible = false;
             // 
             // comboEstacion
             // 
@@ -398,6 +407,7 @@ namespace GiftGestion.Secciones
             this.comboEstacion.Name = "comboEstacion";
             this.comboEstacion.Size = new System.Drawing.Size(184, 24);
             this.comboEstacion.TabIndex = 35;
+            this.comboEstacion.Visible = false;
             // 
             // label9
             // 
@@ -411,6 +421,7 @@ namespace GiftGestion.Secciones
             this.label9.TabIndex = 51;
             this.label9.Text = "estacion";
             this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label9.Visible = false;
             // 
             // comboProveedor
             // 
@@ -423,6 +434,7 @@ namespace GiftGestion.Secciones
             this.comboProveedor.Name = "comboProveedor";
             this.comboProveedor.Size = new System.Drawing.Size(184, 24);
             this.comboProveedor.TabIndex = 39;
+            this.comboProveedor.Visible = false;
             // 
             // label8
             // 
@@ -436,6 +448,7 @@ namespace GiftGestion.Secciones
             this.label8.TabIndex = 50;
             this.label8.Text = "proveedor";
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label8.Visible = false;
             // 
             // label7
             // 
@@ -449,6 +462,7 @@ namespace GiftGestion.Secciones
             this.label7.TabIndex = 49;
             this.label7.Text = "Stock (carga en Remito)";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label7.Visible = false;
             // 
             // label6
             // 
@@ -462,6 +476,7 @@ namespace GiftGestion.Secciones
             this.label6.TabIndex = 48;
             this.label6.Text = "Precio Efectivo";
             this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label6.Visible = false;
             // 
             // textPrecioEfectivo
             // 
@@ -471,6 +486,7 @@ namespace GiftGestion.Secciones
             this.textPrecioEfectivo.Name = "textPrecioEfectivo";
             this.textPrecioEfectivo.Size = new System.Drawing.Size(87, 23);
             this.textPrecioEfectivo.TabIndex = 43;
+            this.textPrecioEfectivo.Visible = false;
             this.textPrecioEfectivo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textPrecioEfectivo_KeyPress);
             // 
             // label2
@@ -485,6 +501,7 @@ namespace GiftGestion.Secciones
             this.label2.TabIndex = 47;
             this.label2.Text = "Precio Lista";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label2.Visible = false;
             // 
             // textPrecioLista
             // 
@@ -494,6 +511,7 @@ namespace GiftGestion.Secciones
             this.textPrecioLista.Name = "textPrecioLista";
             this.textPrecioLista.Size = new System.Drawing.Size(87, 23);
             this.textPrecioLista.TabIndex = 42;
+            this.textPrecioLista.Visible = false;
             this.textPrecioLista.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textPrecioLista_KeyPress);
             // 
             // label5
@@ -508,6 +526,7 @@ namespace GiftGestion.Secciones
             this.label5.TabIndex = 46;
             this.label5.Text = "descripcion";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label5.Visible = false;
             // 
             // textDescripcion
             // 
@@ -517,6 +536,7 @@ namespace GiftGestion.Secciones
             this.textDescripcion.Name = "textDescripcion";
             this.textDescripcion.Size = new System.Drawing.Size(184, 23);
             this.textDescripcion.TabIndex = 34;
+            this.textDescripcion.Visible = false;
             // 
             // label4
             // 
@@ -530,18 +550,19 @@ namespace GiftGestion.Secciones
             this.label4.TabIndex = 45;
             this.label4.Text = "Nuevo Producto";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label4.Visible = false;
             // 
             // buttonInsertar
             // 
             this.buttonInsertar.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.buttonInsertar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonInsertar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonInsertar.Location = new System.Drawing.Point(67, 496);
+            this.buttonInsertar.Location = new System.Drawing.Point(28, 496);
             this.buttonInsertar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonInsertar.Name = "buttonInsertar";
-            this.buttonInsertar.Size = new System.Drawing.Size(106, 29);
+            this.buttonInsertar.Size = new System.Drawing.Size(184, 29);
             this.buttonInsertar.TabIndex = 44;
-            this.buttonInsertar.Text = "Agregar";
+            this.buttonInsertar.Text = "Actualizar Productos";
             this.buttonInsertar.UseVisualStyleBackColor = false;
             this.buttonInsertar.Click += new System.EventHandler(this.buttonInsertar_Click);
             // 
@@ -556,6 +577,7 @@ namespace GiftGestion.Secciones
             this.label3.Size = new System.Drawing.Size(119, 16);
             this.label3.TabIndex = 40;
             this.label3.Text = "Nombre Articulo";
+            this.label3.Visible = false;
             // 
             // textNombre
             // 
@@ -565,6 +587,7 @@ namespace GiftGestion.Secciones
             this.textNombre.Name = "textNombre";
             this.textNombre.Size = new System.Drawing.Size(184, 23);
             this.textNombre.TabIndex = 33;
+            this.textNombre.Visible = false;
             // 
             // panelFiltros
             // 
@@ -952,6 +975,7 @@ namespace GiftGestion.Secciones
             this.dataGridProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridProductos.Size = new System.Drawing.Size(952, 369);
             this.dataGridProductos.TabIndex = 0;
+            this.dataGridProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridProductos_CellContentClick);
             this.dataGridProductos.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridProductos_CellMouseClick);
             this.dataGridProductos.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridProductos_CellMouseDown);
             // 

@@ -11,7 +11,10 @@ namespace GiftGestion.Objetos
 {
     public class FirebaseHelper
     {
-        FirebaseClient firebase = new FirebaseClient("https://gestion-gift-v3-default-rtdb.firebaseio.com");
+        //FirebaseClient firebase = new FirebaseClient("https://gestion-gift-v3-default-rtdb.firebaseio.com");
+        FirebaseClient firebase = new FirebaseClient("https://gestion-gift-default-rtdb.firebaseio.com
+
+");
 
         //------------------------PRODUCTOS-----------------------------------------------
         public async Task<List<Producto>> getAllProductos()
@@ -109,10 +112,8 @@ namespace GiftGestion.Objetos
                       precio_lista = producto.precio_lista,
                       precio_efectivo = producto.precio_efectivo,
                       costo = producto.costo,
-
-                      //----nuevo 
                       deposito = producto.deposito,
-                      general = producto.general,
+                      general = producto.cantidad,
                       puey = producto.puey,
                       stgo = producto.stgo,
                   });   //chequear      
@@ -864,6 +865,32 @@ namespace GiftGestion.Objetos
 
             return toUpdateProducto.Key;
         }
+
+        public async Task updateProducto(Producto producto)
+        {
+            await firebase
+                 .Child("ProductosV2")
+                 .Child(producto.id)
+                 .PutAsync(new Producto()
+                 {
+                     id = producto.id,
+                     nombre_articulo = producto.nombre_articulo,
+                     descripcion = producto.descripcion,
+                     estacion = producto.estacion,
+                     grupo = producto.grupo,
+                     talle = producto.talle,
+                     color = producto.color,
+                     proveedor = producto.proveedor,
+                     cantidad = producto.cantidad,
+                     precio_lista = producto.precio_lista,
+                     precio_efectivo = producto.precio_efectivo,
+                     costo = producto.costo,
+                     deposito = producto.deposito,
+                     general = producto.general,
+                     puey = producto.puey,
+                     stgo = producto.stgo,
+                 });
+        } 
         public async Task<string> getProductoDetalleVenta(string id)
         {
             var toUpdateProducto = (await firebase

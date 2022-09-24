@@ -120,79 +120,57 @@ namespace GiftGestion.Secciones
             }
             else
             {
+                buttonInsertar.Enabled = false;
+                buttonInsertar.Text = "Espere Porfavor...";
+
+                List<Producto> listadoActualizar = new List<Producto>();
+
+                foreach (DataGridViewRow row in this.dataGridProductos.Rows)
+                {
+                    if (row.Cells[0].Value != null)
+                    {
+                        productoSeleccionado.id = row.Cells[0].Value.ToString();
+                        productoSeleccionado.nombre_articulo = row.Cells[1].Value.ToString();
+                        productoSeleccionado.descripcion = row.Cells[2].Value.ToString();
+                        productoSeleccionado.cantidad = row.Cells[3].Value.ToString();
+                        productoSeleccionado.deposito = row.Cells[4].Value.ToString();
+                        productoSeleccionado.stgo = row.Cells[5].Value.ToString();
+                        productoSeleccionado.puey = row.Cells[7].Value.ToString();
+                        productoSeleccionado.proveedor = row.Cells[8].Value.ToString();
+                        productoSeleccionado.estacion = row.Cells[9].Value.ToString();
+                        productoSeleccionado.color = row.Cells[10].Value.ToString();
+                        productoSeleccionado.talle = row.Cells[11].Value.ToString();
+                        productoSeleccionado.grupo = row.Cells[12].Value.ToString();
+                        productoSeleccionado.precio_lista = row.Cells[13].Value.ToString();
+                        productoSeleccionado.precio_efectivo = row.Cells[14].Value.ToString();
+                        productoSeleccionado.costo = row.Cells[15].Value.ToString();
+                        listadoActualizar.Add(productoSeleccionado);
+                    }
+                }
+                
+
+                await firebaseHelper.updateProductosV2(listadoActualizar);
+                MessageBox.Show("Productos Actualizados");
+                buttonInsertar.Enabled = true;
+                buttonInsertar.Text = "Actualizar Productos";
+
+                /*
                 if (!textNombre.Text.Equals("") && !textColor.Text.Equals("") && !comboEstacion.Text.Equals("")
                 && !comboGrupo.Text.Equals("") && !comboTalle.Text.Equals("")
-                && !textPrecioLista.Text.Equals("") && !textPrecioEfectivo.Text.Equals(""))
-                {
+                && !textPrecioLista.Text.Equals("") && !textPrecioEfectivo.Text.Equals("")) {
+                    buttonInsertar.Enabled = false;
+                    buttonInsertar.Text = "Espere Porfavor...";
 
-                    if (buttonInsertar.Text.Equals("Agregar"))
-                    {
-                        try
-                        {
-                            buttonInsertar.Enabled = false;
-                            buttonInsertar.Text = "Espere Porfavor...";
-
-                            string id = DateTime.Now.ToString("ddMMyyyyHHmmss");
-                            //await firebaseHelper.addProducto(id, textNombre.Text, textDescripcion.Text, comboEstacion.Text, comboGrupo.Text,
-                              //  comboTalle.Text, textColor.Text, comboProveedor.Text, "0", textPrecioLista.Text, textPrecioEfectivo.Text, textCosto.Text);  //STOCK GENERAL
-
-                            await firebaseHelper.addDeposito(id, textNombre.Text, textDescripcion.Text, comboEstacion.Text, comboGrupo.Text,
-                              comboTalle.Text, textColor.Text, comboProveedor.Text, "0", textPrecioLista.Text, textPrecioEfectivo.Text, textCosto.Text);    //STOCK DEPOSITO
-
-                            MessageBox.Show("Producto Agregado");
-                            
-                            this.ActiveControl = textNombre;
-                            buttonInsertar.Enabled = true;
-                            buttonInsertar.Text = "Agregar";
-                        }
-                        catch (Exception es)
-                        {
-                            buttonInsertar.Enabled = true;
-                            buttonInsertar.Text = "Agregar";
-                            MessageBox.Show(es.Message.ToString());
-
-                        }
-
-                    }
-                    else if (buttonInsertar.Text.Equals("Actualizar"))
-                    {
-                        buttonInsertar.Enabled = false;
-                        buttonInsertar.Text = "Espere Porfavor...";
-                        await firebaseHelper.updateProducto(idSeleccionado, textNombre.Text, textDescripcion.Text, comboEstacion.Text, comboGrupo.Text,
-                                comboTalle.Text, textColor.Text, comboProveedor.Text, cantProducto, textPrecioLista.Text, textPrecioEfectivo.Text, textCosto.Text);
-                        await firebaseHelper.updateDeposit(idSeleccionado, textNombre.Text, textDescripcion.Text, comboEstacion.Text, comboGrupo.Text,
-                                comboTalle.Text, textColor.Text, comboProveedor.Text, cantDeposito, textPrecioLista.Text, textPrecioEfectivo.Text, textCosto.Text);
-                        
-                        //segun la cantidad de sucursales
-
-                        await firebaseHelper.updateProductoSucursal(idSeleccionado, textNombre.Text, textDescripcion.Text, comboEstacion.Text, comboGrupo.Text,
-                                comboTalle.Text, textColor.Text, comboProveedor.Text, cantSantiag, textPrecioLista.Text, textPrecioEfectivo.Text, textCosto.Text,"Stgo del Estero");
-                        await firebaseHelper.updateProductoSucursal(idSeleccionado, textNombre.Text, textDescripcion.Text, comboEstacion.Text, comboGrupo.Text,
-                              comboTalle.Text, textColor.Text, comboProveedor.Text, cantGaleria, textPrecioLista.Text, textPrecioEfectivo.Text, textCosto.Text, "Galeria Palacio");
-                        
-                        MessageBox.Show("Producto Actualizado");
-                        
-                        this.ActiveControl = textNombre;
-                        buttonInsertar.Enabled = true;
-                        buttonInsertar.Text = "Agregar";
-
-                        textNombre.Text = "";
-                        textDescripcion.Text = "";
-                        comboEstacion.Text = "";
-                        comboGrupo.Text = "";
-                        comboTalle.Text = "";
-                        textColor.Text = "";
-                        comboProveedor.Text = "";
-                        textPrecioEfectivo.Text = "";
-                        textPrecioLista.Text = "";
-                        textCosto.Text = "";
-                    }
-                  
+                    MessageBox.Show("Producto Actualizado");
+                    await firebaseHelper.updateProductoV2();
+                    buttonInsertar.Enabled = true;
+                    buttonInsertar.Text = "Actualizar";
                 }
                 else
                 {
                     MessageBox.Show("Complete Campos");
                 }
+                */
             }
         }
 
@@ -218,15 +196,14 @@ namespace GiftGestion.Secciones
                     DialogResult resultado = MessageBox.Show("Desea Actualizar Producto " + dataGridProductos.Rows[e.RowIndex].Cells[1].Value.ToString()+" ?" , "Advertencia", MessageBoxButtons.YesNoCancel);
                     if (resultado == DialogResult.Yes)
                     {
+                        productoSeleccionado = new Producto();
+                        productoSeleccionado = dataGridProductos.SelectedRows[0].DataBoundItem as Producto;
+
+                        MessageBox.Show(productoSeleccionado.nombre_articulo);
+
                         idSeleccionado = dataGridProductos.Rows[e.RowIndex].Cells[0].Value.ToString();
                         textNombre.Text = dataGridProductos.Rows[e.RowIndex].Cells[1].Value.ToString();
                         textDescripcion.Text = dataGridProductos.Rows[e.RowIndex].Cells[2].Value.ToString();
-
-                        cantProducto = dataGridProductos.Rows[e.RowIndex].Cells[3].Value.ToString();
-                        cantDeposito = dataGridProductos.Rows[e.RowIndex].Cells[4].Value.ToString();
-                        cantSantiag = dataGridProductos.Rows[e.RowIndex].Cells[5].Value.ToString();
-                        cantGaleria = dataGridProductos.Rows[e.RowIndex].Cells[6].Value.ToString();
-                        cantGaleria = dataGridProductos.Rows[e.RowIndex].Cells[7].Value.ToString();
 
                         comboProveedor.Text = dataGridProductos.Rows[e.RowIndex].Cells[8].Value.ToString();
                         comboEstacion.Text = dataGridProductos.Rows[e.RowIndex].Cells[9].Value.ToString();
@@ -236,8 +213,6 @@ namespace GiftGestion.Secciones
                         textPrecioLista.Text = dataGridProductos.Rows[e.RowIndex].Cells[13].Value.ToString();
                         textPrecioEfectivo.Text = dataGridProductos.Rows[e.RowIndex].Cells[14].Value.ToString();
                         textCosto.Text = dataGridProductos.Rows[e.RowIndex].Cells[15].Value.ToString();
-
-                        buttonInsertar.Text = "Actualizar";
                     }
                 }
                 else
@@ -795,21 +770,29 @@ namespace GiftGestion.Secciones
 
         private async void dataGridProductos_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (dataGridProductos.Rows[e.RowIndex].Cells[0].Value!=null)
+            try
             {
-                Clipboard.SetText(dataGridProductos.Rows[e.RowIndex].Cells[0].Value.ToString());
+                if (dataGridProductos.Rows[e.RowIndex].Cells[0].Value != null)
+                {
+                    Clipboard.SetText(dataGridProductos.Rows[e.RowIndex].Cells[0].Value.ToString());
+                }
+
+                calcularEtiquetas();
+                if (user.rol.Equals("Admin") || user.rol.Equals("Gerente") || user.rol.Equals("Gerente") && band && dataGridProductos.Rows[e.RowIndex].Cells[0].Value != null)
+                {
+                    textID.Text = await firebaseHelper.getProductoID(dataGridProductos.Rows[e.RowIndex].Cells[0].Value.ToString());
+                    //textIDDeposito.Text = await firebaseHelper.getProductoIDDeposito(dataGridProductos.Rows[e.RowIndex].Cells[0].Value.ToString());
+                    //textGaleria.Text = await firebaseHelper.getProductoSucursal(dataGridProductos.Rows[e.RowIndex].Cells[0].Value.ToString(),"Galeria Palacio");
+                    //textPueyrredon.Text = await firebaseHelper.getProductoSucursal(dataGridProductos.Rows[e.RowIndex].Cells[0].Value.ToString(),"Pueyrredon");
+                    //textStgo.Text = await firebaseHelper.getProductoSucursal(dataGridProductos.Rows[e.RowIndex].Cells[0].Value.ToString(),"Stgo del Estero");
+                    textRemito.Text = await firebaseHelper.getProductoIDRemito(dataGridProductos.Rows[e.RowIndex].Cells[0].Value.ToString());
+                }
             }
-            
-            calcularEtiquetas();
-            if (user.rol.Equals("Admin") || user.rol.Equals("Gerente") || user.rol.Equals("Gerente") && band)
+            catch(Exception es)
             {
-                textID.Text = await firebaseHelper.getProductoID(dataGridProductos.Rows[e.RowIndex].Cells[0].Value.ToString());
-                //textIDDeposito.Text = await firebaseHelper.getProductoIDDeposito(dataGridProductos.Rows[e.RowIndex].Cells[0].Value.ToString());
-                //textGaleria.Text = await firebaseHelper.getProductoSucursal(dataGridProductos.Rows[e.RowIndex].Cells[0].Value.ToString(),"Galeria Palacio");
-                //textPueyrredon.Text = await firebaseHelper.getProductoSucursal(dataGridProductos.Rows[e.RowIndex].Cells[0].Value.ToString(),"Pueyrredon");
-                //textStgo.Text = await firebaseHelper.getProductoSucursal(dataGridProductos.Rows[e.RowIndex].Cells[0].Value.ToString(),"Stgo del Estero");
-                textRemito.Text = await firebaseHelper.getProductoIDRemito(dataGridProductos.Rows[e.RowIndex].Cells[0].Value.ToString());
+
             }
+           
 
         }
 
@@ -1140,6 +1123,10 @@ namespace GiftGestion.Secciones
                 }
             }
         }
-        
+
+        private void dataGridProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
