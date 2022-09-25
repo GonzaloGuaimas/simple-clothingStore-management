@@ -45,32 +45,7 @@ namespace GiftGestion.Secciones.SubSecciones
             this.labelProdsAgregado = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dataGridDevolucion = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridProductos = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio_lista = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.color = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.talle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.grupo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.costo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio_list = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio_efect = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nuevo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.buttonBuscarProdDevolucion = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
@@ -111,6 +86,31 @@ namespace GiftGestion.Secciones.SubSecciones
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precio_lista = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.color = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.talle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grupo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precio_list = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precio_efect = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nuevo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel7.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panelTabla.SuspendLayout();
@@ -298,102 +298,6 @@ namespace GiftGestion.Secciones.SubSecciones
             this.dataGridDevolucion.TabIndex = 44;
             this.dataGridDevolucion.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridDevolucion_CellMouseDown);
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Codigo";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 69;
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.HeaderText = "nombre";
-            this.dataGridViewTextBoxColumn13.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.ReadOnly = true;
-            this.dataGridViewTextBoxColumn13.Width = 73;
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.HeaderText = "descripcion";
-            this.dataGridViewTextBoxColumn14.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            this.dataGridViewTextBoxColumn14.ReadOnly = true;
-            this.dataGridViewTextBoxColumn14.Width = 96;
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.HeaderText = "Precio";
-            this.dataGridViewTextBoxColumn15.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            this.dataGridViewTextBoxColumn15.ReadOnly = true;
-            this.dataGridViewTextBoxColumn15.Width = 66;
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            this.dataGridViewTextBoxColumn16.HeaderText = "proveedor";
-            this.dataGridViewTextBoxColumn16.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            this.dataGridViewTextBoxColumn16.ReadOnly = true;
-            this.dataGridViewTextBoxColumn16.Width = 88;
-            // 
-            // dataGridViewTextBoxColumn17
-            // 
-            this.dataGridViewTextBoxColumn17.HeaderText = "estacion";
-            this.dataGridViewTextBoxColumn17.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            this.dataGridViewTextBoxColumn17.ReadOnly = true;
-            this.dataGridViewTextBoxColumn17.Width = 78;
-            // 
-            // dataGridViewTextBoxColumn18
-            // 
-            this.dataGridViewTextBoxColumn18.HeaderText = "color";
-            this.dataGridViewTextBoxColumn18.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            this.dataGridViewTextBoxColumn18.ReadOnly = true;
-            this.dataGridViewTextBoxColumn18.Width = 59;
-            // 
-            // dataGridViewTextBoxColumn19
-            // 
-            this.dataGridViewTextBoxColumn19.HeaderText = "talle";
-            this.dataGridViewTextBoxColumn19.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
-            this.dataGridViewTextBoxColumn19.ReadOnly = true;
-            this.dataGridViewTextBoxColumn19.Width = 54;
-            // 
-            // dataGridViewTextBoxColumn20
-            // 
-            this.dataGridViewTextBoxColumn20.HeaderText = "grupo";
-            this.dataGridViewTextBoxColumn20.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            this.dataGridViewTextBoxColumn20.ReadOnly = true;
-            this.dataGridViewTextBoxColumn20.Width = 63;
-            // 
-            // dataGridViewTextBoxColumn21
-            // 
-            this.dataGridViewTextBoxColumn21.HeaderText = "costo";
-            this.dataGridViewTextBoxColumn21.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
-            this.dataGridViewTextBoxColumn21.ReadOnly = true;
-            this.dataGridViewTextBoxColumn21.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn22
-            // 
-            this.dataGridViewTextBoxColumn22.HeaderText = "precio_lista";
-            this.dataGridViewTextBoxColumn22.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
-            this.dataGridViewTextBoxColumn22.ReadOnly = true;
-            this.dataGridViewTextBoxColumn22.Width = 95;
-            // 
-            // dataGridViewTextBoxColumn23
-            // 
-            this.dataGridViewTextBoxColumn23.HeaderText = "precio efectivo";
-            this.dataGridViewTextBoxColumn23.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
-            this.dataGridViewTextBoxColumn23.ReadOnly = true;
-            this.dataGridViewTextBoxColumn23.Width = 105;
-            // 
             // dataGridProductos
             // 
             this.dataGridProductos.AllowUserToResizeColumns = false;
@@ -445,111 +349,6 @@ namespace GiftGestion.Secciones.SubSecciones
             this.dataGridProductos.Size = new System.Drawing.Size(1186, 278);
             this.dataGridProductos.TabIndex = 0;
             this.dataGridProductos.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridProductos_CellMouseDown);
-            // 
-            // id
-            // 
-            this.id.HeaderText = "Codigo";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Width = 69;
-            // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "nombre";
-            this.nombre.MinimumWidth = 6;
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            this.nombre.Width = 73;
-            // 
-            // descripcion
-            // 
-            this.descripcion.HeaderText = "descripcion";
-            this.descripcion.MinimumWidth = 6;
-            this.descripcion.Name = "descripcion";
-            this.descripcion.ReadOnly = true;
-            this.descripcion.Width = 96;
-            // 
-            // precio_lista
-            // 
-            this.precio_lista.HeaderText = "Precio";
-            this.precio_lista.MinimumWidth = 6;
-            this.precio_lista.Name = "precio_lista";
-            this.precio_lista.ReadOnly = true;
-            this.precio_lista.Width = 66;
-            // 
-            // proveedor
-            // 
-            this.proveedor.HeaderText = "proveedor";
-            this.proveedor.MinimumWidth = 6;
-            this.proveedor.Name = "proveedor";
-            this.proveedor.ReadOnly = true;
-            this.proveedor.Width = 88;
-            // 
-            // estacion
-            // 
-            this.estacion.HeaderText = "estacion";
-            this.estacion.MinimumWidth = 6;
-            this.estacion.Name = "estacion";
-            this.estacion.ReadOnly = true;
-            this.estacion.Width = 78;
-            // 
-            // color
-            // 
-            this.color.HeaderText = "color";
-            this.color.MinimumWidth = 6;
-            this.color.Name = "color";
-            this.color.ReadOnly = true;
-            this.color.Width = 59;
-            // 
-            // talle
-            // 
-            this.talle.HeaderText = "talle";
-            this.talle.MinimumWidth = 6;
-            this.talle.Name = "talle";
-            this.talle.ReadOnly = true;
-            this.talle.Width = 54;
-            // 
-            // grupo
-            // 
-            this.grupo.HeaderText = "grupo";
-            this.grupo.MinimumWidth = 6;
-            this.grupo.Name = "grupo";
-            this.grupo.ReadOnly = true;
-            this.grupo.Width = 63;
-            // 
-            // costo
-            // 
-            this.costo.HeaderText = "costo";
-            this.costo.MinimumWidth = 6;
-            this.costo.Name = "costo";
-            this.costo.ReadOnly = true;
-            this.costo.Visible = false;
-            this.costo.Width = 61;
-            // 
-            // precio_list
-            // 
-            this.precio_list.HeaderText = "precio_lista";
-            this.precio_list.MinimumWidth = 6;
-            this.precio_list.Name = "precio_list";
-            this.precio_list.ReadOnly = true;
-            this.precio_list.Width = 95;
-            // 
-            // precio_efect
-            // 
-            this.precio_efect.HeaderText = "precio efectivo";
-            this.precio_efect.MinimumWidth = 6;
-            this.precio_efect.Name = "precio_efect";
-            this.precio_efect.ReadOnly = true;
-            this.precio_efect.Width = 105;
-            // 
-            // nuevo
-            // 
-            this.nuevo.HeaderText = "nuevo";
-            this.nuevo.Name = "nuevo";
-            this.nuevo.ReadOnly = true;
-            this.nuevo.Visible = false;
-            this.nuevo.Width = 64;
             // 
             // panel3
             // 
@@ -1111,6 +910,214 @@ namespace GiftGestion.Secciones.SubSecciones
             this.panel2.Size = new System.Drawing.Size(920, 259);
             this.panel2.TabIndex = 24;
             // 
+            // id
+            // 
+            this.id.HeaderText = "Codigo";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Width = 69;
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "nombre";
+            this.nombre.MinimumWidth = 6;
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            this.nombre.Width = 73;
+            // 
+            // descripcion
+            // 
+            this.descripcion.HeaderText = "descripcion";
+            this.descripcion.MinimumWidth = 6;
+            this.descripcion.Name = "descripcion";
+            this.descripcion.ReadOnly = true;
+            this.descripcion.Width = 96;
+            // 
+            // precio_lista
+            // 
+            this.precio_lista.HeaderText = "Precio";
+            this.precio_lista.MinimumWidth = 6;
+            this.precio_lista.Name = "precio_lista";
+            this.precio_lista.ReadOnly = true;
+            this.precio_lista.Width = 66;
+            // 
+            // proveedor
+            // 
+            this.proveedor.HeaderText = "proveedor";
+            this.proveedor.MinimumWidth = 6;
+            this.proveedor.Name = "proveedor";
+            this.proveedor.ReadOnly = true;
+            this.proveedor.Visible = false;
+            this.proveedor.Width = 88;
+            // 
+            // estacion
+            // 
+            this.estacion.HeaderText = "estacion";
+            this.estacion.MinimumWidth = 6;
+            this.estacion.Name = "estacion";
+            this.estacion.ReadOnly = true;
+            this.estacion.Visible = false;
+            this.estacion.Width = 78;
+            // 
+            // color
+            // 
+            this.color.HeaderText = "color";
+            this.color.MinimumWidth = 6;
+            this.color.Name = "color";
+            this.color.ReadOnly = true;
+            this.color.Width = 59;
+            // 
+            // talle
+            // 
+            this.talle.HeaderText = "talle";
+            this.talle.MinimumWidth = 6;
+            this.talle.Name = "talle";
+            this.talle.ReadOnly = true;
+            this.talle.Width = 54;
+            // 
+            // grupo
+            // 
+            this.grupo.HeaderText = "grupo";
+            this.grupo.MinimumWidth = 6;
+            this.grupo.Name = "grupo";
+            this.grupo.ReadOnly = true;
+            this.grupo.Visible = false;
+            this.grupo.Width = 63;
+            // 
+            // costo
+            // 
+            this.costo.HeaderText = "costo";
+            this.costo.MinimumWidth = 6;
+            this.costo.Name = "costo";
+            this.costo.ReadOnly = true;
+            this.costo.Visible = false;
+            this.costo.Width = 61;
+            // 
+            // precio_list
+            // 
+            this.precio_list.HeaderText = "precio_lista";
+            this.precio_list.MinimumWidth = 6;
+            this.precio_list.Name = "precio_list";
+            this.precio_list.ReadOnly = true;
+            this.precio_list.Width = 95;
+            // 
+            // precio_efect
+            // 
+            this.precio_efect.HeaderText = "precio efectivo";
+            this.precio_efect.MinimumWidth = 6;
+            this.precio_efect.Name = "precio_efect";
+            this.precio_efect.ReadOnly = true;
+            this.precio_efect.Width = 105;
+            // 
+            // nuevo
+            // 
+            this.nuevo.HeaderText = "nuevo";
+            this.nuevo.Name = "nuevo";
+            this.nuevo.ReadOnly = true;
+            this.nuevo.Visible = false;
+            this.nuevo.Width = 64;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Codigo";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 69;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.HeaderText = "nombre";
+            this.dataGridViewTextBoxColumn13.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            this.dataGridViewTextBoxColumn13.Width = 73;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.HeaderText = "descripcion";
+            this.dataGridViewTextBoxColumn14.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            this.dataGridViewTextBoxColumn14.Width = 96;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.HeaderText = "Precio";
+            this.dataGridViewTextBoxColumn15.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.ReadOnly = true;
+            this.dataGridViewTextBoxColumn15.Width = 66;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.HeaderText = "proveedor";
+            this.dataGridViewTextBoxColumn16.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.ReadOnly = true;
+            this.dataGridViewTextBoxColumn16.Visible = false;
+            this.dataGridViewTextBoxColumn16.Width = 88;
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.HeaderText = "estacion";
+            this.dataGridViewTextBoxColumn17.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.ReadOnly = true;
+            this.dataGridViewTextBoxColumn17.Visible = false;
+            this.dataGridViewTextBoxColumn17.Width = 78;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.HeaderText = "color";
+            this.dataGridViewTextBoxColumn18.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.ReadOnly = true;
+            this.dataGridViewTextBoxColumn18.Width = 59;
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.HeaderText = "talle";
+            this.dataGridViewTextBoxColumn19.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.dataGridViewTextBoxColumn19.ReadOnly = true;
+            this.dataGridViewTextBoxColumn19.Width = 54;
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            this.dataGridViewTextBoxColumn20.HeaderText = "grupo";
+            this.dataGridViewTextBoxColumn20.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            this.dataGridViewTextBoxColumn20.ReadOnly = true;
+            this.dataGridViewTextBoxColumn20.Visible = false;
+            this.dataGridViewTextBoxColumn20.Width = 63;
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.HeaderText = "costo";
+            this.dataGridViewTextBoxColumn21.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            this.dataGridViewTextBoxColumn21.ReadOnly = true;
+            this.dataGridViewTextBoxColumn21.Visible = false;
+            this.dataGridViewTextBoxColumn21.Width = 61;
+            // 
+            // dataGridViewTextBoxColumn22
+            // 
+            this.dataGridViewTextBoxColumn22.HeaderText = "precio_lista";
+            this.dataGridViewTextBoxColumn22.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            this.dataGridViewTextBoxColumn22.ReadOnly = true;
+            this.dataGridViewTextBoxColumn22.Width = 95;
+            // 
+            // dataGridViewTextBoxColumn23
+            // 
+            this.dataGridViewTextBoxColumn23.HeaderText = "precio efectivo";
+            this.dataGridViewTextBoxColumn23.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            this.dataGridViewTextBoxColumn23.ReadOnly = true;
+            this.dataGridViewTextBoxColumn23.Width = 105;
+            // 
             // GenerarCambio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1157,19 +1164,6 @@ namespace GiftGestion.Secciones.SubSecciones
         private System.Windows.Forms.Label labelProdsAgregado;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.DataGridView dataGridProductos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precio_lista;
-        private System.Windows.Forms.DataGridViewTextBoxColumn proveedor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn estacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn color;
-        private System.Windows.Forms.DataGridViewTextBoxColumn talle;
-        private System.Windows.Forms.DataGridViewTextBoxColumn grupo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn costo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precio_list;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precio_efect;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nuevo;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button buttonAgregar;
         private System.Windows.Forms.Label label17;
@@ -1209,6 +1203,9 @@ namespace GiftGestion.Secciones.SubSecciones
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridDevolucion;
+        private System.Windows.Forms.Button buttonBuscarProdDevolucion;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox textCodigoDevolucion;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
@@ -1221,8 +1218,18 @@ namespace GiftGestion.Secciones.SubSecciones
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
-        private System.Windows.Forms.Button buttonBuscarProdDevolucion;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textCodigoDevolucion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precio_lista;
+        private System.Windows.Forms.DataGridViewTextBoxColumn proveedor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn color;
+        private System.Windows.Forms.DataGridViewTextBoxColumn talle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn grupo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn costo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precio_list;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precio_efect;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nuevo;
     }
 }
