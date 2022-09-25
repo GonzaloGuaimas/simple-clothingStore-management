@@ -68,6 +68,7 @@ namespace GiftGestion.Secciones
             this.tipo_pago = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ganancia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.observacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -117,6 +118,7 @@ namespace GiftGestion.Secciones
             this.tipo_pago,
             this.total,
             this.ganancia,
+            this.estado,
             this.empleado,
             this.cliente,
             this.observacion});
@@ -537,6 +539,14 @@ namespace GiftGestion.Secciones
             this.ganancia.ReadOnly = true;
             this.ganancia.Width = 82;
             // 
+            // estado
+            // 
+            this.estado.HeaderText = "estado";
+            this.estado.Name = "estado";
+            this.estado.ReadOnly = true;
+            this.estado.Visible = false;
+            this.estado.Width = 68;
+            // 
             // empleado
             // 
             this.empleado.HeaderText = "empleado";
@@ -623,6 +633,7 @@ namespace GiftGestion.Secciones
         private System.Windows.Forms.DataGridViewTextBoxColumn tipo_pago;
         private System.Windows.Forms.DataGridViewTextBoxColumn total;
         private System.Windows.Forms.DataGridViewTextBoxColumn ganancia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estado;
         private System.Windows.Forms.DataGridViewTextBoxColumn empleado;
         private System.Windows.Forms.DataGridViewTextBoxColumn cliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn observacion;
