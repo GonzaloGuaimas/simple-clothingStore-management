@@ -12,9 +12,7 @@ namespace GiftGestion.Objetos
     public class FirebaseHelper
     {
         //FirebaseClient firebase = new FirebaseClient("https://gestion-gift-v3-default-rtdb.firebaseio.com");
-        FirebaseClient firebase = new FirebaseClient("https://gestion-gift-default-rtdb.firebaseio.com
-
-");
+        FirebaseClient firebase = new FirebaseClient("https://gestion-gift-default-rtdb.firebaseio.com");
 
         //------------------------PRODUCTOS-----------------------------------------------
         public async Task<List<Producto>> getAllProductos()
