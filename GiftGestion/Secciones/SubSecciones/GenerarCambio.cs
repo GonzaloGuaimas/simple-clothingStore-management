@@ -366,11 +366,11 @@ namespace GiftGestion.Secciones.SubSecciones
                                     {
                                         string id = DateTime.Now.ToString("ddMMyyyyHHmmss");
 
-                                        firebaseHelper.addVenta(id, dateFecha.Value.ToString("dd/MM/yyyy"), DateTime.Now.ToString("HH:mm"),
+                                        firebaseHelper.addCambio(id, dateFecha.Value.ToString("dd/MM/yyyy"), DateTime.Now.ToString("HH:mm"),
                                             textEmpleado.Text, textSucursal.Text, "-", textObservacion.Text, estado, comboTipoPago.Text,
                                             subtotal.ToString(), ganancia.ToString());
 
-                                        firebaseHelper.addDetalleVenta(id, productosVenta);
+                                        firebaseHelper.addDetalleCambio(id, productosVenta);
 
                                         firebaseHelper.addDetalleFormaPago(id, formaPagoVenta);
 
@@ -381,7 +381,7 @@ namespace GiftGestion.Secciones.SubSecciones
                                     }
                                     
                                     this.Close();
-                                    CambiosForm generarVenta = new CambiosForm();
+                                    CambiosForm generarVenta = new CambiosForm(user);
                                     generarVenta.Show();
                                 }
                                 else
@@ -537,7 +537,6 @@ namespace GiftGestion.Secciones.SubSecciones
                                 band = true;
                             }
                         }
-                        //var clave = await firebaseHelper.getClave(textContraseña.Text);
                         if (band)
                         {
                             dataGridPagos.Rows.Add(comboFormaPago.Text, dateFechaPago.Value.ToString("dd/MM/yyyy"), textMonto.Text);
