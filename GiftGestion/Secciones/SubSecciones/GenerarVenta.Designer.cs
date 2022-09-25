@@ -939,7 +939,7 @@ namespace GiftGestion.Secciones.SubSecciones
             this.dataGridDevolucion.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridDevolucion.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridDevolucion.GridColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridDevolucion.Location = new System.Drawing.Point(0, 314);
+            this.dataGridDevolucion.Location = new System.Drawing.Point(0, 438);
             this.dataGridDevolucion.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridDevolucion.Name = "dataGridDevolucion";
             this.dataGridDevolucion.ReadOnly = true;
@@ -947,7 +947,7 @@ namespace GiftGestion.Secciones.SubSecciones
             this.dataGridDevolucion.RowHeadersWidth = 51;
             this.dataGridDevolucion.RowTemplate.Height = 24;
             this.dataGridDevolucion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridDevolucion.Size = new System.Drawing.Size(234, 396);
+            this.dataGridDevolucion.Size = new System.Drawing.Size(234, 272);
             this.dataGridDevolucion.TabIndex = 43;
             this.dataGridDevolucion.Visible = false;
             // 
