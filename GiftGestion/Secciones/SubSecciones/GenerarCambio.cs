@@ -133,7 +133,7 @@ namespace GiftGestion.Secciones.SubSecciones
         }
         private void textCodigoDevolucion_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            agregarProductoDevolucion();
         }
         private void buttonBuscarProdDevolucion_Click(object sender, EventArgs e)
         {
@@ -450,7 +450,7 @@ namespace GiftGestion.Secciones.SubSecciones
                             dataGridProductos.Rows.Add(producto.id, producto.nombre_articulo, producto.descripcion, precio,
                                                          producto.proveedor, producto.estacion, producto.color, producto.talle, producto.grupo, producto.costo, producto.precio_lista, producto.precio_efectivo, "NO");
 
-
+                            band = true;
                             calcular();
                             textCodigo.Text = "";
                             this.ActiveControl = textCodigo;
@@ -476,23 +476,54 @@ namespace GiftGestion.Secciones.SubSecciones
         {
             try
             {
-                Boolean band = false;
-                string precio = "";
-                foreach (var producto in productos)
+                if (comboTipoPago.Text.Equals("Efectivo") || comboTipoPago.Text.Equals("Lista") || comboTipoPago.Text.Equals("Costo"))
                 {
-                    if (producto.id.Equals(textCodigoDevolucion.Text))
+                    try
                     {
-                        dataGridDevolucion.Rows.Add(producto.id, producto.nombre_articulo, producto.descripcion, precio,
+                        Boolean band = false;
+                        string precio = "";
+
+
+                        foreach (var producto in productos)
+                        {
+                            if (producto.id.Equals(textCodigoDevolucion.Text))
+                            {
+                                band = true;
+                                if (comboTipoPago.Text.Equals("Efectivo"))
+                                {
+                                    precio = producto.precio_efectivo;
+                                }
+                                else if (comboTipoPago.Text.Equals("Lista"))
+                                {
+                                    precio = producto.precio_lista;
+                                }
+                                else if (comboTipoPago.Text.Equals("Costo"))
+                                {
+                                    precio = producto.costo;
+                                }
+                                dataGridDevolucion.Rows.Add(producto.id, producto.nombre_articulo, producto.descripcion, precio,
                                 producto.proveedor, producto.estacion, producto.color, producto.talle, producto.grupo, producto.costo, producto.precio_lista, producto.precio_efectivo);
-                        band = true;
-                        textCodigoDevolucion.Text = "";
-                        this.ActiveControl = textCodigoDevolucion;
-                        break;
+
+                                band = true;
+                                textCodigoDevolucion.Text = "";
+                                this.ActiveControl = textCodigoDevolucion;
+                                calcular();
+                                break;
+                            }
+                        }
+                        if (!band)
+                        {
+                            MessageBox.Show("No se encontró producto");
+                        }
+                    }
+                    catch (Exception es)
+                    {
+
                     }
                 }
-                if (!band)
+                else
                 {
-                    MessageBox.Show("No se encontró producto");
+                    MessageBox.Show("Seleccione Tipo de Pago");
                 }
             }
             catch (Exception es)
@@ -586,7 +617,6 @@ namespace GiftGestion.Secciones.SubSecciones
             total = 0;
             int costoTotal = 0;
             int descuento = 0;
-
             foreach (DataGridViewRow row in dataGridProductos.Rows)
             {
                 if (row.Cells[0].Value != null)
@@ -603,8 +633,8 @@ namespace GiftGestion.Secciones.SubSecciones
                     subtotal = subtotal + Int32.Parse(row.Cells[3].Value.ToString());
                     costoTotal = costoTotal + Int32.Parse(row.Cells[9].Value.ToString());
                 }
-
             }
+
             foreach (DataGridViewRow row in dataGridPagos.Rows)
             {
                 if (row.Cells[0].Value != null)
