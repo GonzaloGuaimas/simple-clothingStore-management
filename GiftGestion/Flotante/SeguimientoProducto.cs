@@ -17,9 +17,11 @@ namespace GiftGestion.Flotante
         private List<Producto> productosRemitos = new List<Producto>();
         private List<Venta> ventas = new List<Venta>();
         private List<Producto> productosVentas = new List<Producto>();
+        private List<Cambio> cambios = new List<Cambio>();
+        private List<Producto> productosCambios = new List<Producto>();
         private Producto product;
 
-        public SeguimientoProducto(Producto prod, List<Remito> rem, List<Producto> productosRem, List<Venta> vent, List<Producto> productosVent)
+        public SeguimientoProducto(Producto prod, List<Remito> rem, List<Producto> productosRem, List<Venta> vent, List<Producto> productosVent, List<Cambio> camb, List<Producto> productosCamb)
         {
             InitializeComponent();
             product = prod;
@@ -27,6 +29,8 @@ namespace GiftGestion.Flotante
             productosRemitos = productosRem;
             ventas = vent;
             productosVentas = productosVent;
+            cambios = camb;
+            productosCambios = productosCamb;
         }
 
         private void SeguimientoProducto_Load(object sender, EventArgs e)
@@ -50,6 +54,22 @@ namespace GiftGestion.Flotante
                     if (producto.foranea.Equals(venta.id) && producto.id.Equals(product.id))
                     {
                         dataGridVentas.Rows.Add(venta.fecha, producto.cantidad, venta.nombre_sucursal, venta.nombre_empleado);
+                    }
+                }
+            }
+            foreach (var cambio in cambios)
+            {
+                foreach (var producto in productosCambios)
+                {
+                    if (producto.foranea.Equals(cambio.id) && producto.id.Equals(product.id))
+                    {
+                        String tipo = "SALIDA";
+                        if (producto.descripcion.Contains("DEVOLUCIÓN"))
+                        {
+                            tipo = "ENTRA";
+                        }
+                        dataGridVentas.Rows.Add(cambio.fecha, producto.cantidad, cambio.nombre_sucursal, cambio.nombre_empleado,tipo);
+                        break;
                     }
                 }
             }

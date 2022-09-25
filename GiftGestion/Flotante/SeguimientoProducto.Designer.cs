@@ -52,7 +52,7 @@ namespace GiftGestion.Flotante
             this.sucursal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridCambio = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,7 +64,7 @@ namespace GiftGestion.Flotante
             this.groupVentas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridVentas)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCambio)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -265,7 +265,7 @@ namespace GiftGestion.Flotante
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.dataGridCambio);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(0, 288);
@@ -275,23 +275,23 @@ namespace GiftGestion.Flotante
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "CAMBIO";
             // 
-            // dataGridView1
+            // dataGridCambio
             // 
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataGridCambio.AllowUserToResizeColumns = false;
+            this.dataGridCambio.AllowUserToResizeRows = false;
+            this.dataGridCambio.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridCambio.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dataGridCambio.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridCambio.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.ButtonFace;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridCambio.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridCambio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridCambio.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
@@ -304,19 +304,19 @@ namespace GiftGestion.Flotante
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.ButtonFace;
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Maroon;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 16);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(794, 134);
-            this.dataGridView1.TabIndex = 2;
+            this.dataGridCambio.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridCambio.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dataGridCambio.GridColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridCambio.Location = new System.Drawing.Point(3, 16);
+            this.dataGridCambio.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridCambio.Name = "dataGridCambio";
+            this.dataGridCambio.ReadOnly = true;
+            this.dataGridCambio.RowHeadersVisible = false;
+            this.dataGridCambio.RowHeadersWidth = 51;
+            this.dataGridCambio.RowTemplate.Height = 24;
+            this.dataGridCambio.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridCambio.Size = new System.Drawing.Size(794, 134);
+            this.dataGridCambio.TabIndex = 2;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -373,7 +373,7 @@ namespace GiftGestion.Flotante
             this.groupVentas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridVentas)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCambio)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -396,7 +396,7 @@ namespace GiftGestion.Flotante
         private System.Windows.Forms.DataGridViewTextBoxColumn sucursal;
         private System.Windows.Forms.DataGridViewTextBoxColumn usuario;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridCambio;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
