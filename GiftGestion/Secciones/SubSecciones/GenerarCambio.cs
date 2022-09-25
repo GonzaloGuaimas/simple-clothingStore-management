@@ -378,7 +378,7 @@ namespace GiftGestion.Secciones.SubSecciones
                                         await firebaseHelper.addProductos(productosDevolucion, "+", " ", textSucursal.Text, "+");
                                         await firebaseHelper.addProductos(productosActualizar, "-", " ", textSucursal.Text, "-");
 
-                                        MessageBox.Show("Venta Realizada. Estado: " + estado);
+                                        MessageBox.Show("Cambio Realizado");
                                     }
                                     
                                     this.Close();
@@ -622,8 +622,8 @@ namespace GiftGestion.Secciones.SubSecciones
             {
                 if (row.Cells[0].Value != null)
                 {
-                    subtotal = subtotal - Int32.Parse(row.Cells[3].Value.ToString());
-                    costoTotal = costoTotal - Int32.Parse(row.Cells[9].Value.ToString());
+                    subtotal = subtotal + Int32.Parse(row.Cells[3].Value.ToString());
+                    costoTotal = costoTotal + Int32.Parse(row.Cells[9].Value.ToString());
                 }
 
             }
@@ -631,8 +631,8 @@ namespace GiftGestion.Secciones.SubSecciones
             {
                 if (row.Cells[0].Value != null)
                 {
-                    subtotal = subtotal + Int32.Parse(row.Cells[3].Value.ToString());
-                    costoTotal = costoTotal + Int32.Parse(row.Cells[9].Value.ToString());
+                    subtotal = subtotal - Int32.Parse(row.Cells[3].Value.ToString());
+                    costoTotal = costoTotal - Int32.Parse(row.Cells[9].Value.ToString());
                 }
             }
 

@@ -375,7 +375,7 @@ namespace GiftGestion.Secciones
             }
             textGananciasVentas.Text ="Ganancias: $" +agregarPuntos(ganancias.ToString());
             textBrutoVentas.Text = "Bruto: $" + total.ToString();
-            textCantidadVentas.Text = (dataGridVentas.Rows.Count).ToString();
+            textCantidadVentas.Text = (dataGridVentas.Rows.Count-1).ToString();
 
 
         }
