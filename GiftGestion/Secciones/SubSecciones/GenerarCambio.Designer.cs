@@ -286,7 +286,7 @@ namespace GiftGestion.Secciones.SubSecciones
             this.dataGridDevolucion.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridDevolucion.Dock = System.Windows.Forms.DockStyle.Right;
             this.dataGridDevolucion.GridColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridDevolucion.Location = new System.Drawing.Point(604, 0);
+            this.dataGridDevolucion.Location = new System.Drawing.Point(534, 0);
             this.dataGridDevolucion.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridDevolucion.Name = "dataGridDevolucion";
             this.dataGridDevolucion.ReadOnly = true;
@@ -294,7 +294,7 @@ namespace GiftGestion.Secciones.SubSecciones
             this.dataGridDevolucion.RowHeadersWidth = 51;
             this.dataGridDevolucion.RowTemplate.Height = 24;
             this.dataGridDevolucion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridDevolucion.Size = new System.Drawing.Size(582, 278);
+            this.dataGridDevolucion.Size = new System.Drawing.Size(652, 278);
             this.dataGridDevolucion.TabIndex = 44;
             this.dataGridDevolucion.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridDevolucion_CellMouseDown);
             // 
@@ -432,7 +432,7 @@ namespace GiftGestion.Secciones.SubSecciones
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Maroon;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridProductos.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridProductos.Dock = System.Windows.Forms.DockStyle.Left;
+            this.dataGridProductos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridProductos.GridColor = System.Drawing.SystemColors.WindowText;
             this.dataGridProductos.Location = new System.Drawing.Point(0, 0);
             this.dataGridProductos.Margin = new System.Windows.Forms.Padding(2);
@@ -442,7 +442,7 @@ namespace GiftGestion.Secciones.SubSecciones
             this.dataGridProductos.RowHeadersWidth = 51;
             this.dataGridProductos.RowTemplate.Height = 24;
             this.dataGridProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridProductos.Size = new System.Drawing.Size(539, 278);
+            this.dataGridProductos.Size = new System.Drawing.Size(1186, 278);
             this.dataGridProductos.TabIndex = 0;
             this.dataGridProductos.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridProductos_CellMouseDown);
             // 

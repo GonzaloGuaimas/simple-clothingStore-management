@@ -335,8 +335,9 @@ namespace GiftGestion.Secciones.SubSecciones
                                             producto.precio_lista = row.Cells[10].Value.ToString();
                                             producto.precio_efectivo = row.Cells[11].Value.ToString();
 
-                                            productosDevolucion.Add(producto);
                                             productosVenta.Add(producto);
+                                            producto.descripcion = row.Cells[2].Value.ToString()+" DEVOLUCIÓN";
+                                            productosDevolucion.Add(producto);
                                         }
 
                                     }
