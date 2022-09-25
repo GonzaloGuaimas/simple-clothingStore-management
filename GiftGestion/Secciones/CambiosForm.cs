@@ -77,7 +77,7 @@ namespace GiftGestion.Secciones
         {
             try
             {
-                var ventas = await firebaseHelper.getAllVentas();
+                var ventas = await firebaseHelper.getAllCambios();
                 if (ventas != null)
                 {
                     dataGridVentas.Rows.Clear();
@@ -127,7 +127,7 @@ namespace GiftGestion.Secciones
         {
             try
             {
-                var productos = await firebaseHelper.getAllDetalleVenta();
+                var productos = await firebaseHelper.getAllDetalleCambio();
                 if (productos != null)
                 {
                     foreach (var producto in productos)
