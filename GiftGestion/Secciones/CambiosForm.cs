@@ -19,10 +19,11 @@ namespace GiftGestion.Secciones
         Venta venta = new Venta();
         FirebaseHelper firebaseHelper = new FirebaseHelper();
 
-        List<Venta> ventasCarga = new List<Venta>();
+        List<Cambio> ventasCarga = new List<Cambio>();
         List<FormaPago> formaPagoCarga = new List<FormaPago>();
         List<Producto> productosCarga = new List<Producto>();
-
+        private string rutaModeloVentas = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "/GIFT Gestion/Files/ventas.xlsx";
+        private string rutaSalidaVentas = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "/GIFT Gestion/Ventas/";
         public CambiosForm(Usuario usuario)
         {
             if (!System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable())
