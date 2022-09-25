@@ -24,11 +24,6 @@ namespace GiftGestion.Secciones
         FirebaseHelper firebaseHelper = new FirebaseHelper();
         public List<Producto> productos = new List<Producto>();
         
-        //public List<Producto> productosGaleria = new List<Producto>();
-        //public List<Producto> productosStgo = new List<Producto>();
-        //public List<Producto> productosPueyrredon = new List<Producto>();
-        //public List<Producto> productosDep = new List<Producto>();
-
         public List<Producto> productosCarga = new List<Producto>();
 
 
@@ -36,6 +31,9 @@ namespace GiftGestion.Secciones
         private List<Venta> ventas = new List<Venta>();
         public List<Producto> productosREMITO = new List<Producto>();
         public List<Producto> productosVENTA = new List<Producto>();
+
+        private List<Cambio> cambios = new List<Cambio>();
+        public List<Producto> productosCambios = new List<Producto>();
 
         public List<Grupo> gruposCarga = new List<Grupo>();
 
@@ -83,6 +81,7 @@ namespace GiftGestion.Secciones
             WindowState = FormWindowState.Maximized;
             cargarProductosRemito();
             cargarProductosVenta();
+            cargarProductosCambios();
 
             gruposCarga = await firebaseHelper.getAllGrupos();
             foreach (var grupo in gruposCarga)
@@ -915,6 +914,26 @@ namespace GiftGestion.Secciones
 
             }
         }
+        private async void cargarProductosCambios()
+        {
+            try
+            {
+                var cambioss = await firebaseHelper.getAllDetalleCambio();
+                cambios = await firebaseHelper.getAllCambios();
+                if (cambioss != null)
+                {
+                    foreach (var producto in cambioss)
+                    {
+                        productosCambios.Add(producto);
+                    }
+                }
+                buttonExportar.Enabled = true;
+            }
+            catch (Exception es)
+            {
+
+            }
+        }
 
         private void textCodigo_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -952,7 +971,7 @@ namespace GiftGestion.Secciones
         {
             if (productoSeleccionado.id != null)
             {
-                SeguimientoProducto seguimiento = new SeguimientoProducto(productoSeleccionado, remitos, productosREMITO, ventas, productosVENTA);
+                SeguimientoProducto seguimiento = new SeguimientoProducto(productoSeleccionado, remitos, productosREMITO, ventas, productosVENTA, cambios, productosCambios);
                 seguimiento.Show();
             }
 

@@ -34,6 +34,9 @@ namespace GiftGestion.Secciones
         List<Producto> detalleRemitos = new List<Producto>();
         List<GastoDiario> cargaGastos = new List<GastoDiario>();
 
+        List<Cambio> cambios = new List<Cambio>();
+        List<Producto> detalleCambio = new List<Producto>();
+
         public List<Producto> prods = new List<Producto>();
         public List<Grupo> grupos = new List<Grupo>();
 
@@ -108,6 +111,8 @@ namespace GiftGestion.Secciones
             cargaGastos = await firebaseHelper.getAllGastoDiario();
             ventas = await firebaseHelper.getAllVentas();
             productosVendidos = await firebaseHelper.getAllDetalleVenta();
+            cambios = await firebaseHelper.getAllCambios();
+            detalleCambio = await firebaseHelper.getAllDetalleCambio();
             remitos = await firebaseHelper.getAllRemitos();
             detalleRemitos = await firebaseHelper.getAllDetalleRemito();
             formasPagos = await firebaseHelper.getAllDetalleFormaPago();
@@ -190,6 +195,13 @@ namespace GiftGestion.Secciones
                     dataGridVentas.Rows.Add(venta.fecha, venta.nombre_sucursal, venta.total,venta.ganancia,venta.tipo_pago);
                 }
             }
+            foreach (var venta in cambios)
+            {
+                if (venta.fecha.Substring(3, 2).Equals(comboMesVentas.Text) && venta.fecha.Substring(6, 4).Equals(comboAño.Text))
+                {
+                    dataGridVentas.Rows.Add(venta.fecha, venta.nombre_sucursal, venta.total, venta.ganancia, venta.tipo_pago);
+                }
+            }
 
             calcularMontosVentas();
         }
@@ -204,6 +216,13 @@ namespace GiftGestion.Secciones
                     dataGridVentas.Rows.Add(venta.fecha, venta.nombre_sucursal, venta.total, venta.ganancia, venta.tipo_pago);
                 }
             }
+            foreach (var venta in cambios)
+            {
+                if (venta.fecha.Substring(3, 2).Equals(comboMesVentas.Text) && venta.nombre_sucursal.Equals(comboSucursalVentas.Text) && venta.fecha.Substring(6, 4).Equals(comboAño.Text))
+                {
+                    dataGridVentas.Rows.Add(venta.fecha, venta.nombre_sucursal, venta.total, venta.ganancia, venta.tipo_pago);
+                }
+            }
             calcularMontosVentas();
         }
 
@@ -211,6 +230,13 @@ namespace GiftGestion.Secciones
         {
             dataGridVentas.Rows.Clear();
             foreach (var venta in ventas)
+            {
+                if (venta.fecha.Substring(3, 2).Equals(comboMesVentas.Text) && venta.tipo_pago.Equals(comboTipoPago.Text) && venta.fecha.Substring(6, 4).Equals(comboAño.Text))
+                {
+                    dataGridVentas.Rows.Add(venta.fecha, venta.nombre_sucursal, venta.total, venta.ganancia, venta.tipo_pago);
+                }
+            }
+            foreach (var venta in cambios)
             {
                 if (venta.fecha.Substring(3, 2).Equals(comboMesVentas.Text) && venta.tipo_pago.Equals(comboTipoPago.Text) && venta.fecha.Substring(6, 4).Equals(comboAño.Text))
                 {
@@ -613,6 +639,17 @@ namespace GiftGestion.Secciones
                     if (forma.foranea.Equals(venta.id))
                     {
                         forma.sucursal = venta.nombre_sucursal;
+                        formasPagosSucursales.Add(forma);
+                    }
+                }
+            }
+            foreach (var cambio in cambios)
+            {
+                foreach (var forma in formasPagos)
+                {
+                    if (forma.foranea.Equals(cambio.id))
+                    {
+                        forma.sucursal = cambio.nombre_sucursal;
                         formasPagosSucursales.Add(forma);
                     }
                 }

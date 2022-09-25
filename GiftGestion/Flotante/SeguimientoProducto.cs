@@ -68,7 +68,7 @@ namespace GiftGestion.Flotante
                         {
                             tipo = "ENTRA";
                         }
-                        dataGridVentas.Rows.Add(cambio.fecha, producto.cantidad, cambio.nombre_sucursal, cambio.nombre_empleado,tipo);
+                        dataGridCambio.Rows.Add(cambio.fecha, producto.cantidad, cambio.nombre_sucursal, cambio.nombre_empleado,tipo);
                         break;
                     }
                 }
