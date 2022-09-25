@@ -255,6 +255,12 @@
     <Compile Include="Secciones\RRHHForm.Designer.cs">
       <DependentUpon>RRHHForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Secciones\SubSecciones\GenerarCambio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secciones\SubSecciones\GenerarCambio.Designer.cs">
+      <DependentUpon>GenerarCambio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Secciones\SubSecciones\GenerarOC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -332,6 +338,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Secciones\RRHHForm.resx">
       <DependentUpon>RRHHForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Secciones\SubSecciones\GenerarCambio.resx">
+      <DependentUpon>GenerarCambio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Secciones\SubSecciones\GenerarOC.resx">
       <DependentUpon>GenerarOC.cs</DependentUpon>

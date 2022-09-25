@@ -55,7 +55,7 @@ namespace GiftGestion.Secciones
             this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label4 = new System.Windows.Forms.Label();
-            this.buttonGenerarRemito = new System.Windows.Forms.Button();
+            this.buttonGenerarCambio = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.buttonVolver = new System.Windows.Forms.Button();
@@ -238,7 +238,7 @@ namespace GiftGestion.Secciones
             this.panelInsert.Controls.Add(this.label5);
             this.panelInsert.Controls.Add(this.dataGridProductos);
             this.panelInsert.Controls.Add(this.label4);
-            this.panelInsert.Controls.Add(this.buttonGenerarRemito);
+            this.panelInsert.Controls.Add(this.buttonGenerarCambio);
             this.panelInsert.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelInsert.Location = new System.Drawing.Point(723, 101);
             this.panelInsert.Margin = new System.Windows.Forms.Padding(2);
@@ -398,18 +398,19 @@ namespace GiftGestion.Secciones
             this.label4.Text = "Detalle Cambio";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // buttonGenerarRemito
+            // buttonGenerarCambio
             // 
-            this.buttonGenerarRemito.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonGenerarRemito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonGenerarRemito.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonGenerarRemito.Location = new System.Drawing.Point(117, 467);
-            this.buttonGenerarRemito.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonGenerarRemito.Name = "buttonGenerarRemito";
-            this.buttonGenerarRemito.Size = new System.Drawing.Size(249, 33);
-            this.buttonGenerarRemito.TabIndex = 10;
-            this.buttonGenerarRemito.Text = "Generar Nuevo Cambio";
-            this.buttonGenerarRemito.UseVisualStyleBackColor = false;
+            this.buttonGenerarCambio.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonGenerarCambio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonGenerarCambio.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonGenerarCambio.Location = new System.Drawing.Point(117, 467);
+            this.buttonGenerarCambio.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonGenerarCambio.Name = "buttonGenerarCambio";
+            this.buttonGenerarCambio.Size = new System.Drawing.Size(249, 33);
+            this.buttonGenerarCambio.TabIndex = 10;
+            this.buttonGenerarCambio.Text = "Generar Nuevo Cambio";
+            this.buttonGenerarCambio.UseVisualStyleBackColor = false;
+            this.buttonGenerarCambio.Click += new System.EventHandler(this.buttonGenerarCambio_Click);
             // 
             // panel1
             // 
@@ -609,7 +610,7 @@ namespace GiftGestion.Secciones
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn monto;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button buttonGenerarRemito;
+        private System.Windows.Forms.Button buttonGenerarCambio;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button buttonVolver;

@@ -47,5 +47,10 @@ namespace GiftGestion.Secciones
         {
 
         }
+
+        private void buttonGenerarCambio_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
