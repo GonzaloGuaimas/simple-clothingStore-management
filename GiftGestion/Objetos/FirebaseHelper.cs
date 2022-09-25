@@ -1528,6 +1528,191 @@ namespace GiftGestion.Objetos
         }
 
 
+        //---------------------------CAMBIOS-----------------------------------------------
+        //---------------------------CAMBIOS-----------------------------------------------
+        //---------------------------CAMBIOS-----------------------------------------------
+        //---------------------------CAMBIOS-----------------------------------------------
+
+        public async Task<List<Cambio>> getAllCambios()
+        {
+
+            return (await firebase
+              .Child("Cambios")
+              .OnceAsync<Cambio>()).Select(item => new Cambio
+              {
+                  id = item.Object.id,
+                  fecha = item.Object.fecha,
+                  hora = item.Object.hora,
+                  nombre_empleado = item.Object.nombre_empleado,
+                  nombre_sucursal = item.Object.nombre_sucursal,
+                  nombre_cliente = item.Object.nombre_cliente,
+                  observacion = item.Object.observacion,
+                  estado = item.Object.estado,
+                  tipo_pago = item.Object.tipo_pago,
+                  total = item.Object.total,
+                  ganancia = item.Object.ganancia
+
+              }).ToList();
+        }
+        public async Task addCambio(string id, string fecha, string hora, string nombre_empleado, string nombre_sucursal
+            , string nombre_cliente, string observacion, string estado, string tipo_pago, string total, string ganancia)
+        {
+            await firebase
+              .Child("Cambios")
+              .PostAsync(new Cambio()
+              {
+                  id = id,
+                  fecha = fecha,
+                  hora = hora,
+                  nombre_empleado = nombre_empleado,
+                  nombre_sucursal = nombre_sucursal,
+                  nombre_cliente = nombre_cliente,
+                  observacion = observacion,
+                  estado = estado,
+                  tipo_pago = tipo_pago,
+                  total = total,
+                  ganancia = ganancia,
+
+              });
+        }
+
+        public async Task<Cambio> getCambio(string id)
+        {
+            var allProductos = await getAllCambios();
+            await firebase
+              .Child("Cambios")
+              .OnceAsync<Cambio>();
+            return allProductos.Where(a => a.id == id).FirstOrDefault();
+        }
+
+        public async Task updateCambio(string id, string fecha, string hora, string nombre_empleado, string nombre_sucursal
+            , string nombre_cliente, string observacion, string estado, string tipo_pago, string total, string ganancia)
+        {
+            var toUpdateProducto = (await firebase
+              .Child("Cambios")
+              .OnceAsync<Cambio>()).Where(a => a.Object.id == id).FirstOrDefault();
+
+            await firebase
+              .Child("Cambios")
+              .Child(toUpdateProducto.Key)
+              .PutAsync(new Cambio()
+              {
+                  id = id,
+                  fecha = fecha,
+                  hora = hora,
+                  nombre_empleado = nombre_empleado,
+                  nombre_sucursal = nombre_sucursal,
+                  nombre_cliente = nombre_cliente,
+                  observacion = observacion,
+                  estado = estado,
+                  tipo_pago = tipo_pago,
+                  total = total,
+                  ganancia = ganancia,
+              });
+        }
+
+        public async Task deleteCambio(string id)
+        {
+            var toDeleteProducto = (await firebase
+              .Child("Cambios")
+              .OnceAsync<Cambio>()).Where(a => a.Object.id == id).FirstOrDefault();
+            await firebase.Child("Cambios").Child(toDeleteProducto.Key).DeleteAsync();
+        }
+
+
+        //-------------------------------DETALLE ---------------------------------------------------
+        public async Task<List<Producto>> getAllDetalleCambio()//string id
+        {
+
+            return (await firebase
+              .Child("DetalleCambio")
+              .OnceAsync<Producto>()).Select(item => new Producto
+              {
+                  foranea = item.Object.foranea,
+                  id = item.Object.id,
+                  nombre_articulo = item.Object.nombre_articulo,
+                  descripcion = item.Object.descripcion,
+                  estacion = item.Object.estacion,
+                  grupo = item.Object.grupo,
+                  talle = item.Object.talle,
+                  color = item.Object.color,
+                  proveedor = item.Object.proveedor,
+                  precio = item.Object.precio,
+                  cantidad = item.Object.cantidad,
+
+                  costo = item.Object.costo,
+                  precio_lista = item.Object.precio_lista,
+                  precio_efectivo = item.Object.precio_efectivo,
+
+              }).ToList();
+        }
+        public async Task addDetalleCambio(string id, List<Producto> productos)
+        {
+            foreach (var producto in productos)
+            {
+                await firebase
+                  .Child("DetalleCambio")
+                  //.Child(id)
+                  .PostAsync(new Producto()
+                  {
+                      foranea = id,
+                      id = producto.id,
+                      nombre_articulo = producto.nombre_articulo,
+                      descripcion = producto.descripcion,
+                      estacion = producto.estacion,
+                      grupo = producto.grupo,
+                      talle = producto.talle,
+                      color = producto.color,
+                      proveedor = producto.proveedor,
+                      precio = producto.precio,
+                      cantidad = producto.cantidad,
+
+                      costo = producto.costo,
+                      precio_lista = producto.precio_lista,
+                      precio_efectivo = producto.precio_efectivo,
+                  });
+            }
+        }
+        public async Task deleteDetalleCambio(string idCambio)
+        {
+            var toUpdateProducto = (await firebase
+              .Child("DetalleCambio")
+              .OnceAsync<Producto>()).Where(a => a.Object.foranea == idCambio).FirstOrDefault();
+            if (toUpdateProducto != null)
+            {
+                await firebase.Child("DetalleCambio").Child(toUpdateProducto.Key).DeleteAsync();
+            }
+
+        }
+        public async Task updateDetalleCambio(string id, List<Producto> productos)
+        {
+            foreach (var producto in productos)
+            {
+                await firebase
+                  .Child("DetalleCambios")
+                  .Child(id)
+                  .PutAsync(new Producto()
+                  {
+                      id = producto.id,
+                      nombre_articulo = producto.nombre_articulo,
+                      descripcion = producto.descripcion,
+                      estacion = producto.estacion,
+                      grupo = producto.grupo,
+                      talle = producto.talle,
+                      color = producto.color,
+                      proveedor = producto.proveedor,
+                      precio = producto.precio,
+                      cantidad = producto.cantidad,
+
+                      costo = producto.costo,
+                      precio_lista = producto.precio_lista,
+                      precio_efectivo = producto.precio_efectivo,
+                  });
+            }
+        }
+
+        //hasta aca llega CAMBIOS
+
         //-----------------------------------CLAVES-----------------------------------
         //-----------------------------------CLAVES-----------------------------------
         //-----------------------------------CLAVES-----------------------------------

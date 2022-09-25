@@ -171,6 +171,7 @@
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Objetos\ArqueoCaja.cs" />
+    <Compile Include="Objetos\Cambio.cs" />
     <Compile Include="Objetos\Clave.cs" />
     <Compile Include="Objetos\Cliente.cs" />
     <Compile Include="Objetos\ConexionSQL.cs" />
@@ -193,6 +194,12 @@
     </Compile>
     <Compile Include="Secciones\ArqueoCajaForm.Designer.cs">
       <DependentUpon>ArqueoCajaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Secciones\CambiosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secciones\CambiosForm.Designer.cs">
+      <DependentUpon>CambiosForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Secciones\ClientesForm.cs">
       <SubType>Form</SubType>
@@ -295,6 +302,9 @@
     </Compile>
     <EmbeddedResource Include="Secciones\ArqueoCajaForm.resx">
       <DependentUpon>ArqueoCajaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Secciones\CambiosForm.resx">
+      <DependentUpon>CambiosForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Secciones\ClientesForm.resx">
       <DependentUpon>ClientesForm.cs</DependentUpon>

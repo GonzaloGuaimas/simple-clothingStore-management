@@ -133,7 +133,11 @@ namespace GiftGestion
             reposStock.Show();
         }
 
-
+        private void buttonCambios_Click(object sender, EventArgs e)
+        {
+            CambiosForm cambios = new CambiosForm(user);
+            cambios.Show();
+        }
 
 
         private async void cargarUsuarios()
@@ -154,6 +158,6 @@ namespace GiftGestion
             }
         }
 
-      
+     
     }
 }
