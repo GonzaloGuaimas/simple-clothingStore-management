@@ -591,6 +591,15 @@ namespace GiftGestion.Secciones.SubSecciones
             {
                 if (row.Cells[0].Value != null)
                 {
+                    subtotal = subtotal - Int32.Parse(row.Cells[3].Value.ToString());
+                    costoTotal = costoTotal - Int32.Parse(row.Cells[9].Value.ToString());
+                }
+
+            }
+            foreach (DataGridViewRow row in dataGridDevolucion.Rows)
+            {
+                if (row.Cells[0].Value != null)
+                {
                     subtotal = subtotal + Int32.Parse(row.Cells[3].Value.ToString());
                     costoTotal = costoTotal + Int32.Parse(row.Cells[9].Value.ToString());
                 }
