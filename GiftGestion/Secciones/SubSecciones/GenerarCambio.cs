@@ -133,7 +133,14 @@ namespace GiftGestion.Secciones.SubSecciones
         }
         private void textCodigoDevolucion_KeyPress(object sender, KeyPressEventArgs e)
         {
-            agregarProductoDevolucion();
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                agregarProductoDevolucion();
+            }
         }
         private void buttonBuscarProdDevolucion_Click(object sender, EventArgs e)
         {
