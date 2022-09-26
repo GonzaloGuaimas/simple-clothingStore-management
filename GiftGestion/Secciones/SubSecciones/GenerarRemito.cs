@@ -623,8 +623,6 @@ namespace GiftGestion.Secciones.SubSecciones
 
                             MessageBox.Show("Remito Agregado");
                             this.Close();
-                            RemitosForm remitosForm = new RemitosForm(user);
-                            remitosForm.Show();
                         }
                         catch (Exception es)
                         {

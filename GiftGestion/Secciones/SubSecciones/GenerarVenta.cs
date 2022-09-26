@@ -660,9 +660,7 @@ namespace GiftGestion.Secciones.SubSecciones
                                     }
 
                                     this.Close();
-                                    Venta ven = new Venta();
-                                    GenerarVenta generarVenta = new GenerarVenta(user, ven);
-                                    generarVenta.Show();
+                                    Venta ven = new Venta()
                                 }
                                 else
                                 {
@@ -906,9 +904,7 @@ namespace GiftGestion.Secciones.SubSecciones
                                     }
 
                                     this.Close();
-                                    Venta ven = new Venta();
-                                    GenerarVenta generarVenta = new GenerarVenta(user, ven);
-                                    generarVenta.Show();
+                                    Venta ven = new Venta()
                                 }
                                 else
                                 {

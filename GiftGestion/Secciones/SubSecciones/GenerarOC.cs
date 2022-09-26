@@ -172,8 +172,6 @@ namespace GiftGestion.Secciones.SubSecciones
                     );
                 MessageBox.Show("Orden de Compra generada");
                 this.Close();
-                OrdenCompraForm ordenCompraForm = new OrdenCompraForm(user);
-                ordenCompraForm.Show();
             }
             catch (Exception es)
             {

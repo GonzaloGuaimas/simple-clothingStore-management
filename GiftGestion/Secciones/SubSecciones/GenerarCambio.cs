@@ -387,10 +387,8 @@ namespace GiftGestion.Secciones.SubSecciones
 
                                         MessageBox.Show("Cambio Realizado");
                                     }
-                                    
+
                                     this.Close();
-                                    CambiosForm generarVenta = new CambiosForm(user);
-                                    generarVenta.Show();
                                 }
                                 else
                                 {
