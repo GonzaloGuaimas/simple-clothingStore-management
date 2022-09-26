@@ -140,7 +140,7 @@ namespace GiftGestion.Secciones
             this.comboRol.FormattingEnabled = true;
             this.comboRol.ItemHeight = 14;
             this.comboRol.Items.AddRange(new object[] {
-            "Gerente",
+            "Super",
             "Admin",
             "Vendedor"});
             this.comboRol.Location = new System.Drawing.Point(521, 66);

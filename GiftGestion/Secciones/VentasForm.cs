@@ -48,7 +48,7 @@ namespace GiftGestion.Secciones
             {
                 dataGridVentas.Columns[6].Visible = false;
             }
-            if (user.rol.Equals("Admin") || user.rol.Equals("Gerente"))
+            if (user.rol.Equals("Admin") || user.rol.Equals("Super"))
             {
                 textTituloCodBarras.Visible = true;
                 textCodigo.Visible = true;

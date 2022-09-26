@@ -97,13 +97,9 @@ namespace GiftGestion.Secciones
                 panelAgregarProducto.Visible = false;
                 dataGridProductos.Columns[15].Visible = false;
             }
-            if (user.rol.Equals("Admin") || user.rol.Equals("Gerente") || user.rol.Equals("Gerente"))
-            {
-                //textIDDeposito.Visible = true;
+            if (user.rol.Equals("Admin") || user.rol.Equals("Super"))
+            { 
                 textID.Visible = true;
-                //textStgo.Visible = true;
-                //textGaleria.Visible = true;
-                //textPueyrredon.Visible = true;
                 textRemito.Visible = true;
             }
             cargarProductos();
@@ -777,7 +773,7 @@ namespace GiftGestion.Secciones
                 }
 
                 calcularEtiquetas();
-                if (user.rol.Equals("Admin") || user.rol.Equals("Gerente") || user.rol.Equals("Gerente") && band && dataGridProductos.Rows[e.RowIndex].Cells[0].Value != null)
+                if (user.rol.Equals("Admin") || user.rol.Equals("Super") && band && dataGridProductos.Rows[e.RowIndex].Cells[0].Value != null)
                 {
                     textID.Text = await firebaseHelper.getProductoID(dataGridProductos.Rows[e.RowIndex].Cells[0].Value.ToString());
                     //textIDDeposito.Text = await firebaseHelper.getProductoIDDeposito(dataGridProductos.Rows[e.RowIndex].Cells[0].Value.ToString());

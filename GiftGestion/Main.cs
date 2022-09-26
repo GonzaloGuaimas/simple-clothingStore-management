@@ -39,7 +39,7 @@ namespace GiftGestion
         }
         private void buttonRemitos_Click(object sender, EventArgs e)
         {
-            if (user.rol.Equals("Admin") || user.rol.Equals("Gerente") || user.rol.Equals("Gerente"))
+            if (user.rol.Equals("Admin") || user.rol.Equals("Super"))
             {
                 RemitosForm remitos = new RemitosForm(user);
                 remitos.Show();
@@ -73,7 +73,7 @@ namespace GiftGestion
 
         private void buttonOrdenesCompras_Click(object sender, EventArgs e)
         {
-            if (user.rol.Equals("Admin") || user.rol.Equals("Gerente"))
+            if (user.rol.Equals("Admin") || user.rol.Equals("Super"))
             {
                 OrdenCompraForm ordenCompraForm = new OrdenCompraForm(user);
                 ordenCompraForm.Show();
@@ -86,7 +86,7 @@ namespace GiftGestion
 
         private void buttonEstadisticas_Click(object sender, EventArgs e)
         {
-            if (user.rol.Equals("Admin") || user.rol.Equals("Gerente"))
+            if (user.rol.Equals("Super"))
             {
                 EstadisticasForm estadisticasForm = new EstadisticasForm(user);
                 estadisticasForm.Show();
@@ -99,7 +99,7 @@ namespace GiftGestion
 
         private void buttonConfiguracion_Click(object sender, EventArgs e)
         {
-            if (user.rol.Equals("Admin") || user.rol.Equals("Gerente"))
+            if (user.rol.Equals("Super") || user.rol.Equals("Admin"))
             {
                 ConfiguracionForm configuracionForm = new ConfiguracionForm(user);
                 configuracionForm.Show();
@@ -111,7 +111,7 @@ namespace GiftGestion
         }
         private void buttonRRHH_Click(object sender, EventArgs e)
         {
-            if (user.rol.Equals("Admin") || user.rol.Equals("Gerente"))
+            if (user.rol.Equals("Super"))
             {
                 RRHHForm rrhh = new RRHHForm(user);
                 rrhh.Show();
@@ -148,7 +148,6 @@ namespace GiftGestion
 
                 foreach (var empleado in empleados)
                 {
-                    if(empleado.rol.Equals("Admin"))
                     usuarios.Add(empleado);
                 }
             }

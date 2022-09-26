@@ -35,11 +35,11 @@ namespace GiftGestion.Secciones
 
         private async void cargarDatos()
         {
-            /*
+            
             usuarios = await firebaseHelper.getAllUsuario();
             roles = await firebaseHelper.getAllRol();
             cargarUsuarios();
-            */
+            
         }
 
         private void cargarUsuarios()
@@ -167,11 +167,11 @@ namespace GiftGestion.Secciones
                     if (!textDNI.Text.Equals("") && !textApellido.Text.Equals("") && !textNombre.Text.Equals("") && !comboRol.Text.Equals("")
                      && !textContraseña.Text.Equals("") && !comboSucursal.Text.Equals(""))
                     {
-                        if (comboRol.Equals("Admin") && comboRol.Equals("Gerente") && !textEmail.Text.Equals(""))
+                        if (comboRol.Equals("Admin") && comboRol.Equals("Super") && !textEmail.Text.Equals(""))
                         {
                             await firebaseHelper.addUsuario(textDNI.Text, textNombre.Text, textApellido.Text, comboRol.Text, comboSucursal.Text, textContraseña.Text, textEmail.Text);
                         }
-                        else if (comboRol.Equals("Admin") && comboRol.Equals("Gerente") && textEmail.Text.Equals(""))
+                        else if (comboRol.Equals("Admin") && comboRol.Equals("Super") && textEmail.Text.Equals(""))
                         {
                             MessageBox.Show("Complete Campo con Gmail (unicamente @gmail)");
                         }
@@ -187,11 +187,11 @@ namespace GiftGestion.Secciones
                     if (!textDNI.Text.Equals("") && !textApellido.Text.Equals("") && !textNombre.Text.Equals("") && !comboRol.Text.Equals("")
                      && !textContraseña.Text.Equals("") && !comboSucursal.Text.Equals(""))
                     {
-                        if (comboRol.Equals("Admin") && comboRol.Equals("Gerente") && !textEmail.Text.Equals(""))
+                        if (comboRol.Equals("Admin") && comboRol.Equals("Super") && !textEmail.Text.Equals(""))
                         {
                             await firebaseHelper.updateUsuario(textDNI.Text, textNombre.Text, textApellido.Text, comboRol.Text, comboSucursal.Text, textContraseña.Text, textEmail.Text);
                         }
-                        else if (comboRol.Equals("Admin") && comboRol.Equals("Gerente") && textEmail.Text.Equals(""))
+                        else if (comboRol.Equals("Admin") && comboRol.Equals("Super") && textEmail.Text.Equals(""))
                         {
                             MessageBox.Show("Complete Campo con Gmail (unicamente @gmail)");
                         }
@@ -211,7 +211,7 @@ namespace GiftGestion.Secciones
 
         private void comboRol_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboRol.Text.Equals("Admin") || comboRol.Text.Equals("Gerente"))
+            if (comboRol.Text.Equals("Admin") || comboRol.Text.Equals("Super"))
             {
                 textEmail.Enabled = true;
                 comboSucursal.Enabled = false;
