@@ -174,6 +174,8 @@ namespace GiftGestion.Secciones
         {
             try
             {
+                buttonGenerarEtiqueta.Text = "Espere porfavor...";
+                buttonGenerarEtiqueta.Enabled = false;
                 CreateWordDocument(rutaModeloEtiqueta, rutaEtiquetas + DateTime.Now.ToString("ddMMyyyyHHmmss")+ ".pdf");
             }
             catch (Exception es)
@@ -499,7 +501,8 @@ namespace GiftGestion.Secciones
 
 
                     MessageBox.Show("Etiqueta Generada | Carpeta: GIFT Gestion/Etiquetas Generadas");
-
+                    buttonGenerarEtiqueta.Text = "Generar Etiqueta";
+                    buttonGenerarEtiqueta.Enabled = true;
                 }
             }
             
@@ -518,6 +521,8 @@ namespace GiftGestion.Secciones
                 wordApp.Quit();
                 MessageBox.Show("Ocurrio un error");
                 MessageBox.Show(es.Message);
+                buttonGenerarEtiqueta.Text = "Generar Etiqueta";
+                buttonGenerarEtiqueta.Enabled = true;
             }
         }
 

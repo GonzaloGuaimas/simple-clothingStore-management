@@ -843,7 +843,7 @@ namespace GiftGestion.Secciones
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(42, 13);
             this.label18.TabIndex = 30;
-            this.label18.Text = "21 Max";
+            this.label18.Text = "42 Max";
             this.label18.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label19
