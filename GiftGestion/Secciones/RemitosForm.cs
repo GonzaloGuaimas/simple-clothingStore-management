@@ -180,7 +180,7 @@ namespace GiftGestion.Secciones
                 DialogResult resultado = MessageBox.Show("Desea abrir Remito?", "Advertencia", MessageBoxButtons.YesNoCancel);
                 if (resultado == DialogResult.Yes)
                 {
-
+                    this.Close();
                     GenerarRemito generar = new GenerarRemito(user, remitoSeleccionado, orden);
                     generar.Show();
                 }

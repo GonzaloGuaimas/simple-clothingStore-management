@@ -133,6 +133,7 @@ namespace GiftGestion.Secciones
                         {
                             if (orden.id.Equals(dataGridOrdenesCompras.Rows[e.RowIndex].Cells[0].Value.ToString()))
                             {
+                                this.Close();
                                 GenerarRemito generar = new GenerarRemito(user, remito, orden);
                                 generar.Show();
                                 break;
