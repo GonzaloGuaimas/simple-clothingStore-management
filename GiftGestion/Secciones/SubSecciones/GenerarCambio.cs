@@ -63,7 +63,15 @@ namespace GiftGestion.Secciones.SubSecciones
             }
             else
             {
-                generarVenta();
+                if (total >= 0)
+                {
+                    generarVenta();
+                }
+                else
+                {
+                    MessageBox.Show("No se Permite Cambiar Prenda por una de Menor precio", "Denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
             }
 
         }
