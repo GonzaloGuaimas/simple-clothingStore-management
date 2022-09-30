@@ -124,6 +124,7 @@ namespace GiftGestion.Secciones
                 {
                     if (row.Cells[0].Value != null)
                     {
+                        productoSeleccionado = new Producto();
                         productoSeleccionado.id = row.Cells[0].Value.ToString();
                         productoSeleccionado.nombre_articulo = row.Cells[1].Value.ToString();
                         productoSeleccionado.descripcion = row.Cells[2].Value.ToString();
