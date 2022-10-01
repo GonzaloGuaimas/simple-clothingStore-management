@@ -113,9 +113,6 @@ namespace GiftGestion.Flotante
             this.comboEmpleado.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboEmpleado.FormattingEnabled = true;
             this.comboEmpleado.ItemHeight = 14;
-            this.comboEmpleado.Items.AddRange(new object[] {
-            "Efectivo",
-            "Lista"});
             this.comboEmpleado.Location = new System.Drawing.Point(44, 145);
             this.comboEmpleado.Margin = new System.Windows.Forms.Padding(2);
             this.comboEmpleado.Name = "comboEmpleado";

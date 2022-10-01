@@ -260,5 +260,10 @@ namespace GiftGestion.Secciones.SubSecciones
                 }
             }
         }
+
+        private void groupBox5_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

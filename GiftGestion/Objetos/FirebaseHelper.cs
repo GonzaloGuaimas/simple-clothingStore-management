@@ -11,8 +11,8 @@ namespace GiftGestion.Objetos
 {
     public class FirebaseHelper
     {
-        //FirebaseClient firebase = new FirebaseClient("");
         FirebaseClient firebase = new FirebaseClient("");
+        //FirebaseClient firebase = new FirebaseClient("");
 
         //------------------------PRODUCTOS-----------------------------------------------
         public async Task<List<Producto>> getAllProductos()

@@ -235,8 +235,6 @@ namespace GiftGestion.Secciones.SubSecciones
             this.comboProveedorOC.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboProveedorOC.FormattingEnabled = true;
             this.comboProveedorOC.ItemHeight = 14;
-            this.comboProveedorOC.Items.AddRange(new object[] {
-            "Central"});
             this.comboProveedorOC.Location = new System.Drawing.Point(311, 34);
             this.comboProveedorOC.Margin = new System.Windows.Forms.Padding(2);
             this.comboProveedorOC.Name = "comboProveedorOC";
@@ -580,6 +578,7 @@ namespace GiftGestion.Secciones.SubSecciones
             this.groupBox5.TabIndex = 39;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Agregar Producto Nuevo";
+            this.groupBox5.Enter += new System.EventHandler(this.groupBox5_Enter);
             // 
             // buttonLimpiar
             // 
@@ -787,10 +786,10 @@ namespace GiftGestion.Secciones.SubSecciones
             this.comboGrupo.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboGrupo.FormattingEnabled = true;
             this.comboGrupo.ItemHeight = 16;
-            this.comboGrupo.Location = new System.Drawing.Point(385, 37);
+            this.comboGrupo.Location = new System.Drawing.Point(350, 37);
             this.comboGrupo.Margin = new System.Windows.Forms.Padding(2);
             this.comboGrupo.Name = "comboGrupo";
-            this.comboGrupo.Size = new System.Drawing.Size(78, 24);
+            this.comboGrupo.Size = new System.Drawing.Size(113, 24);
             this.comboGrupo.TabIndex = 56;
             // 
             // label10
@@ -798,7 +797,7 @@ namespace GiftGestion.Secciones.SubSecciones
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label10.Location = new System.Drawing.Point(382, 19);
+            this.label10.Location = new System.Drawing.Point(347, 18);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(48, 16);
@@ -817,7 +816,7 @@ namespace GiftGestion.Secciones.SubSecciones
             "verano",
             "otoño",
             "primavera"});
-            this.comboEstacion.Location = new System.Drawing.Point(290, 37);
+            this.comboEstacion.Location = new System.Drawing.Point(245, 36);
             this.comboEstacion.Margin = new System.Windows.Forms.Padding(2);
             this.comboEstacion.Name = "comboEstacion";
             this.comboEstacion.Size = new System.Drawing.Size(78, 24);
@@ -828,7 +827,7 @@ namespace GiftGestion.Secciones.SubSecciones
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label9.Location = new System.Drawing.Point(286, 19);
+            this.label9.Location = new System.Drawing.Point(241, 18);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(65, 16);
