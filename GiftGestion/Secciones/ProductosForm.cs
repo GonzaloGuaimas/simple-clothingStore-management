@@ -37,7 +37,7 @@ namespace GiftGestion.Secciones
 
         public List<Grupo> gruposCarga = new List<Grupo>();
 
-        private string rutaModeloStock = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "/GIFT Gestion/Files/stock.xlsx";
+        private string rutaModeloStock = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "/GIFT Gestion/Files/CONTROLSTOCK.xlsx";
         private string rutaSalidaStock = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "/GIFT Gestion/Stock/";
 
 
@@ -811,13 +811,13 @@ namespace GiftGestion.Secciones
         
         private void buttonExportar_Click(object sender, EventArgs e)
         {
-            /*
             try
             {
                 SLDocument sl = new SLDocument(rutaModeloStock);
-                int j = 5;
+                int j = 2;
                 foreach (var producto in productosCarga)
                 {
+                    /*
                     int remito = 0;
                     int venta = 0;
 
@@ -835,36 +835,33 @@ namespace GiftGestion.Secciones
                             venta = venta + Int32.Parse(item.cantidad);
                         }
                     }
+                    */
 
+                    sl.SetCellValue("A" + j.ToString(), producto.id);
+                    sl.SetCellValue("B" + j.ToString(), producto.nombre_articulo);
+                    sl.SetCellValue("C" + j.ToString(), producto.descripcion);
+                    sl.SetCellValue("D" + j.ToString(), producto.color);
+                    sl.SetCellValue("E" + j.ToString(), producto.talle);
+                    sl.SetCellValue("F" + j.ToString(), producto.proveedor);
+                    sl.SetCellValue("G" + j.ToString(), producto.cantidad);
 
-                    sl.SetCellValue("B" + j.ToString(), producto.id);   //id prod
-                    sl.SetCellValue("C" + j.ToString(), producto.nombre_articulo);
-                    sl.SetCellValue("D" + j.ToString(), producto.descripcion);
-                   
-                    sl.SetCellValue("E" + j.ToString(), producto.color);
-                    sl.SetCellValue("F" + j.ToString(), producto.talle);
-                    sl.SetCellValue("G" + j.ToString(), producto.grupo);
+                    sl.SetCellValue("I" + j.ToString(), producto.puey);
 
+                    sl.SetCellValue("K" + j.ToString(), producto.stgo);
 
-                    sl.SetCellValue("I" + j.ToString(), remito);    //STOCK REMITO
-                    sl.SetCellValue("K" + j.ToString(), venta);    //STOCK VENTA
-                    sl.SetCellValue("M" + j.ToString(), producto.cantidad); //stock gral
-                    sl.SetCellValue("O" + j.ToString(), buscarProductoSucursal("Stgo del Estero", producto.id));    //STOCK STGO
-                    sl.SetCellValue("Q" + j.ToString(), buscarProductoSucursal("Galeria Palacio", producto.id));    //STOCK GAL
-                    sl.SetCellValue("S" + j.ToString(), buscarProductoSucursal("Pueyrredon", producto.id));    //STOCK PUEY 
-                    sl.SetCellValue("U" + j.ToString(), buscarProductoSucursal("Deposito", producto.id));    //STOCK PUEY 
+                    sl.SetCellValue("M" + j.ToString(), producto.precio_efectivo);
+                    sl.SetCellValue("N" + j.ToString(), producto.precio_lista);
 
                     j++;
                 }
 
-                sl.SaveAs(rutaSalidaStock + " control stock" + ".xlsx");
+                sl.SaveAs(rutaSalidaStock + "CONTROL STOCK" + ".xlsx");
                 MessageBox.Show("Se Generó el STOCK", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception es)
             {
 
             }
-            */
         }
 
         private async void cargarProductosRemito()

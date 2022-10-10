@@ -1005,7 +1005,7 @@ namespace GiftGestion.Secciones
             this.stock.HeaderText = "stock Gral";
             this.stock.MinimumWidth = 6;
             this.stock.Name = "stock";
-            this.stock.Width = 80;
+            this.stock.Width = 87;
             // 
             // deposito
             // 
@@ -1026,6 +1026,7 @@ namespace GiftGestion.Secciones
             this.cantGal.HeaderText = "Galeria Palacio";
             this.cantGal.MinimumWidth = 6;
             this.cantGal.Name = "cantGal";
+            this.cantGal.Visible = false;
             this.cantGal.Width = 105;
             // 
             // Pueyrredon
