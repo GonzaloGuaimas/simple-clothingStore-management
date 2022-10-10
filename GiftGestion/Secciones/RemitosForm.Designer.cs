@@ -399,7 +399,7 @@ namespace GiftGestion.Secciones
             this.buttonExportar.Name = "buttonExportar";
             this.buttonExportar.Size = new System.Drawing.Size(178, 29);
             this.buttonExportar.TabIndex = 14;
-            this.buttonExportar.Text = "Exportar Excel";
+            this.buttonExportar.Text = "Generar PDF";
             this.buttonExportar.UseVisualStyleBackColor = false;
             this.buttonExportar.Click += new System.EventHandler(this.buttonExportar_Click);
             // 

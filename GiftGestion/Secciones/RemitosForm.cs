@@ -511,8 +511,8 @@ namespace GiftGestion.Secciones
                         cant += Int32.Parse(producto.cantidad);
                         this.FindAndReplace(wordApp, "<desc" + i.ToString() + ">", producto.nombre_articulo+ " | "+producto.descripcion+" | "+producto.talle+" | "+producto.color);
                         this.FindAndReplace(wordApp, "<cant" + i.ToString() + ">", producto.cantidad);
-                        this.FindAndReplace(wordApp, "<costo" + i.ToString() + ">", agregarPuntos(producto.costo));
-                        this.FindAndReplace(wordApp, "<subt" + i.ToString() + ">", agregarPuntos(subtotal.ToString()));
+                        this.FindAndReplace(wordApp, "<costo" + i.ToString() + ">","$" + agregarPuntos(producto.costo));
+                        this.FindAndReplace(wordApp, "<subt" + i.ToString() + ">", "$" + agregarPuntos(subtotal.ToString()));
                         i++;
                     }
                     for(int j = i; j<57; j++)
