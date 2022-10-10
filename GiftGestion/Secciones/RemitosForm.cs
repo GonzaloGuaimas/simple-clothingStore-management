@@ -515,6 +515,14 @@ namespace GiftGestion.Secciones
                         this.FindAndReplace(wordApp, "<subt" + i.ToString() + ">", agregarPuntos(subtotal.ToString()));
                         i++;
                     }
+                    for(int j = i; j<57; j++)
+                    {
+                        this.FindAndReplace(wordApp, "<desc" + j.ToString() + ">", "");
+                        this.FindAndReplace(wordApp, "<cant" + j.ToString() + ">", "");
+                        this.FindAndReplace(wordApp, "<costo" + j.ToString() + ">", "");
+                        this.FindAndReplace(wordApp, "<subt" + j.ToString() + ">", "");
+                        i++;
+                    }
                     this.FindAndReplace(wordApp, "<monto>", agregarPuntos(total.ToString()));
                     this.FindAndReplace(wordApp, "<cant>", cant.ToString());
 
