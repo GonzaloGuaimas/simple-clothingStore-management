@@ -56,19 +56,6 @@ namespace GiftGestion.Secciones
             this.dateFecha = new System.Windows.Forms.DateTimePicker();
             this.label15 = new System.Windows.Forms.Label();
             this.panelInsert = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.textInfo = new System.Windows.Forms.Label();
-            this.comboRemitoOC = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.buttonGuardarCambios = new System.Windows.Forms.Button();
-            this.comboEstadoOC = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.buttonGenerarOC = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textTOTAL = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.dataGridProductos = new System.Windows.Forms.DataGridView();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -81,15 +68,28 @@ namespace GiftGestion.Secciones
             this.color = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.talle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grupo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textTOTAL = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.textInfo = new System.Windows.Forms.Label();
+            this.comboRemitoOC = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.buttonGuardarCambios = new System.Windows.Forms.Button();
+            this.comboEstadoOC = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.buttonGenerarOC = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelTabla.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridOrdenesCompras)).BeginInit();
             this.panelUtiles.SuspendLayout();
             this.panelFiltros.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.panelInsert.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridProductos)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridProductos)).BeginInit();
             this.SuspendLayout();
             // 
             // panelTabla
@@ -264,12 +264,12 @@ namespace GiftGestion.Secciones
             this.buttonExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExportar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonExportar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonExportar.Location = new System.Drawing.Point(254, 13);
+            this.buttonExportar.Location = new System.Drawing.Point(11, 15);
             this.buttonExportar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonExportar.Name = "buttonExportar";
             this.buttonExportar.Size = new System.Drawing.Size(178, 29);
             this.buttonExportar.TabIndex = 14;
-            this.buttonExportar.Text = "Exportar Excel";
+            this.buttonExportar.Text = "Exportar PDF";
             this.buttonExportar.UseVisualStyleBackColor = false;
             this.buttonExportar.Click += new System.EventHandler(this.buttonExportar_Click);
             // 
@@ -353,181 +353,6 @@ namespace GiftGestion.Secciones
             this.panelInsert.Name = "panelInsert";
             this.panelInsert.Size = new System.Drawing.Size(444, 531);
             this.panelInsert.TabIndex = 10;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.textInfo);
-            this.panel2.Controls.Add(this.comboRemitoOC);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.buttonGuardarCambios);
-            this.panel2.Controls.Add(this.comboEstadoOC);
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 335);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(442, 161);
-            this.panel2.TabIndex = 15;
-            // 
-            // textInfo
-            // 
-            this.textInfo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textInfo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textInfo.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.textInfo.Location = new System.Drawing.Point(0, 0);
-            this.textInfo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.textInfo.Name = "textInfo";
-            this.textInfo.Size = new System.Drawing.Size(442, 32);
-            this.textInfo.TabIndex = 59;
-            this.textInfo.Text = "Info";
-            this.textInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // comboRemitoOC
-            // 
-            this.comboRemitoOC.BackColor = System.Drawing.SystemColors.Control;
-            this.comboRemitoOC.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboRemitoOC.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.comboRemitoOC.FormattingEnabled = true;
-            this.comboRemitoOC.Items.AddRange(new object[] {
-            "SI",
-            "NO"});
-            this.comboRemitoOC.Location = new System.Drawing.Point(251, 76);
-            this.comboRemitoOC.Margin = new System.Windows.Forms.Padding(2);
-            this.comboRemitoOC.Name = "comboRemitoOC";
-            this.comboRemitoOC.Size = new System.Drawing.Size(184, 24);
-            this.comboRemitoOC.TabIndex = 57;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(249, 58);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 16);
-            this.label3.TabIndex = 58;
-            this.label3.Text = "Remito";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // buttonGuardarCambios
-            // 
-            this.buttonGuardarCambios.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonGuardarCambios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonGuardarCambios.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonGuardarCambios.Location = new System.Drawing.Point(117, 114);
-            this.buttonGuardarCambios.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonGuardarCambios.Name = "buttonGuardarCambios";
-            this.buttonGuardarCambios.Size = new System.Drawing.Size(249, 33);
-            this.buttonGuardarCambios.TabIndex = 13;
-            this.buttonGuardarCambios.Text = "Guardar Cambios";
-            this.buttonGuardarCambios.UseVisualStyleBackColor = false;
-            this.buttonGuardarCambios.Click += new System.EventHandler(this.buttonGuardarCambios_Click);
-            // 
-            // comboEstadoOC
-            // 
-            this.comboEstadoOC.BackColor = System.Drawing.SystemColors.Control;
-            this.comboEstadoOC.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboEstadoOC.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.comboEstadoOC.FormattingEnabled = true;
-            this.comboEstadoOC.Items.AddRange(new object[] {
-            "PENDIENTE",
-            "PAGADA"});
-            this.comboEstadoOC.Location = new System.Drawing.Point(20, 76);
-            this.comboEstadoOC.Margin = new System.Windows.Forms.Padding(2);
-            this.comboEstadoOC.Name = "comboEstadoOC";
-            this.comboEstadoOC.Size = new System.Drawing.Size(184, 24);
-            this.comboEstadoOC.TabIndex = 55;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label8.Location = new System.Drawing.Point(18, 58);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(55, 16);
-            this.label8.TabIndex = 56;
-            this.label8.Text = "Estado";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // buttonGenerarOC
-            // 
-            this.buttonGenerarOC.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonGenerarOC.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.buttonGenerarOC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonGenerarOC.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonGenerarOC.Location = new System.Drawing.Point(0, 496);
-            this.buttonGenerarOC.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonGenerarOC.Name = "buttonGenerarOC";
-            this.buttonGenerarOC.Size = new System.Drawing.Size(442, 33);
-            this.buttonGenerarOC.TabIndex = 10;
-            this.buttonGenerarOC.Text = "Generar Nuevo OC";
-            this.buttonGenerarOC.UseVisualStyleBackColor = false;
-            this.buttonGenerarOC.Click += new System.EventHandler(this.buttonGenerarOC_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(47)))));
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1186, 81);
-            this.panel1.TabIndex = 9;
-            // 
-            // label1
-            // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1186, 81);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "ORDENES DE COMPRA";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textTOTAL
-            // 
-            this.textTOTAL.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textTOTAL.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textTOTAL.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.textTOTAL.Location = new System.Drawing.Point(0, 0);
-            this.textTOTAL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.textTOTAL.Name = "textTOTAL";
-            this.textTOTAL.Size = new System.Drawing.Size(442, 32);
-            this.textTOTAL.TabIndex = 16;
-            this.textTOTAL.Text = "Total: 0  Seleccion: 0";
-            this.textTOTAL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(0, 303);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(442, 32);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "Cambiar estado Orden Compra";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label4
-            // 
-            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(0, 32);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(442, 32);
-            this.label4.TabIndex = 18;
-            this.label4.Text = "Detalle Orden Compra";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dataGridProductos
             // 
@@ -669,6 +494,181 @@ namespace GiftGestion.Secciones
             this.grupo.ReadOnly = true;
             this.grupo.Width = 63;
             // 
+            // label4
+            // 
+            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label4.Location = new System.Drawing.Point(0, 32);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(442, 32);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "Detalle Orden Compra";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.Location = new System.Drawing.Point(0, 303);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(442, 32);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Cambiar estado Orden Compra";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textTOTAL
+            // 
+            this.textTOTAL.Dock = System.Windows.Forms.DockStyle.Top;
+            this.textTOTAL.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textTOTAL.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.textTOTAL.Location = new System.Drawing.Point(0, 0);
+            this.textTOTAL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.textTOTAL.Name = "textTOTAL";
+            this.textTOTAL.Size = new System.Drawing.Size(442, 32);
+            this.textTOTAL.TabIndex = 16;
+            this.textTOTAL.Text = "Total: 0  Seleccion: 0";
+            this.textTOTAL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.textInfo);
+            this.panel2.Controls.Add(this.comboRemitoOC);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.buttonGuardarCambios);
+            this.panel2.Controls.Add(this.comboEstadoOC);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 335);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(442, 161);
+            this.panel2.TabIndex = 15;
+            // 
+            // textInfo
+            // 
+            this.textInfo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.textInfo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textInfo.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.textInfo.Location = new System.Drawing.Point(0, 0);
+            this.textInfo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.textInfo.Name = "textInfo";
+            this.textInfo.Size = new System.Drawing.Size(442, 32);
+            this.textInfo.TabIndex = 59;
+            this.textInfo.Text = "Info";
+            this.textInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // comboRemitoOC
+            // 
+            this.comboRemitoOC.BackColor = System.Drawing.SystemColors.Control;
+            this.comboRemitoOC.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboRemitoOC.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.comboRemitoOC.FormattingEnabled = true;
+            this.comboRemitoOC.Items.AddRange(new object[] {
+            "SI",
+            "NO"});
+            this.comboRemitoOC.Location = new System.Drawing.Point(251, 76);
+            this.comboRemitoOC.Margin = new System.Windows.Forms.Padding(2);
+            this.comboRemitoOC.Name = "comboRemitoOC";
+            this.comboRemitoOC.Size = new System.Drawing.Size(184, 24);
+            this.comboRemitoOC.TabIndex = 57;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(249, 58);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(55, 16);
+            this.label3.TabIndex = 58;
+            this.label3.Text = "Remito";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // buttonGuardarCambios
+            // 
+            this.buttonGuardarCambios.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonGuardarCambios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonGuardarCambios.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonGuardarCambios.Location = new System.Drawing.Point(117, 114);
+            this.buttonGuardarCambios.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonGuardarCambios.Name = "buttonGuardarCambios";
+            this.buttonGuardarCambios.Size = new System.Drawing.Size(249, 33);
+            this.buttonGuardarCambios.TabIndex = 13;
+            this.buttonGuardarCambios.Text = "Guardar Cambios";
+            this.buttonGuardarCambios.UseVisualStyleBackColor = false;
+            this.buttonGuardarCambios.Click += new System.EventHandler(this.buttonGuardarCambios_Click);
+            // 
+            // comboEstadoOC
+            // 
+            this.comboEstadoOC.BackColor = System.Drawing.SystemColors.Control;
+            this.comboEstadoOC.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboEstadoOC.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.comboEstadoOC.FormattingEnabled = true;
+            this.comboEstadoOC.Items.AddRange(new object[] {
+            "PENDIENTE",
+            "PAGADA"});
+            this.comboEstadoOC.Location = new System.Drawing.Point(20, 76);
+            this.comboEstadoOC.Margin = new System.Windows.Forms.Padding(2);
+            this.comboEstadoOC.Name = "comboEstadoOC";
+            this.comboEstadoOC.Size = new System.Drawing.Size(184, 24);
+            this.comboEstadoOC.TabIndex = 55;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label8.Location = new System.Drawing.Point(18, 58);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(55, 16);
+            this.label8.TabIndex = 56;
+            this.label8.Text = "Estado";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // buttonGenerarOC
+            // 
+            this.buttonGenerarOC.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonGenerarOC.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.buttonGenerarOC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonGenerarOC.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonGenerarOC.Location = new System.Drawing.Point(0, 496);
+            this.buttonGenerarOC.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonGenerarOC.Name = "buttonGenerarOC";
+            this.buttonGenerarOC.Size = new System.Drawing.Size(442, 33);
+            this.buttonGenerarOC.TabIndex = 10;
+            this.buttonGenerarOC.Text = "Generar Nuevo OC";
+            this.buttonGenerarOC.UseVisualStyleBackColor = false;
+            this.buttonGenerarOC.Click += new System.EventHandler(this.buttonGenerarOC_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(47)))));
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1186, 81);
+            this.panel1.TabIndex = 9;
+            // 
+            // label1
+            // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(1186, 81);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "ORDENES DE COMPRA";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // OrdenCompraForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -692,10 +692,10 @@ namespace GiftGestion.Secciones
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.panelInsert.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridProductos)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridProductos)).EndInit();
             this.ResumeLayout(false);
 
         }
